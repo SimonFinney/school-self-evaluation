@@ -17,6 +17,6 @@ module.exports = (gulp, config) =>
       )
       .pipe(autoprefixer(config.autoprefixer))
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest(config.paths.distDir + 'css'))
+      .pipe(gulp.dest(config.paths.basePath))
       .pipe(browserSync.stream())
   );

@@ -108,6 +108,8 @@ function school_self_evaluation_scripts() {
 
 	wp_enqueue_script( 'school-self-evaluation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+  wp_enqueue_script( 'school-self-evaluation-main', get_template_directory_uri() . '/dist/js/bundle.js', array(), '20151215', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

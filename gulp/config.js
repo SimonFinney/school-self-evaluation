@@ -2,8 +2,6 @@
 
 'use strict';
 
-const basePath = 'app/wp-content/themes/school-self-evaluation/';
-
 // Paths
 const imageExtensions = [
   'gif',
@@ -13,8 +11,9 @@ const imageExtensions = [
 ];
 
 const paths = new (function() {
-  this.app = `${basePath}assets/`;
-  this.distDir = `${basePath}dist/`;;
+  this.basePath = 'app/wp-content/themes/school-self-evaluation/';
+  this.app = `${this.basePath}assets/`;
+  this.distDir = `${this.basePath}dist/`;;
 
   this.extras = {
     favicon: '*.ico',
@@ -22,7 +21,7 @@ const paths = new (function() {
     images: `**/*.{${imageExtensions}}`,
   };
 
-  this.html = `${this.app}**/*.html`;
+  this.php = `${this.basePath}**/*.php`;
   this.js = `${this.app}js/`;
   this.scss = `${this.app}scss/**/*.scss`;
 });

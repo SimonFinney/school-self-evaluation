@@ -22,11 +22,8 @@ require('./gulp/tasks/eslint')(gulp, config.paths.js);
 // Extras
 require('./gulp/tasks/extras')(gulp, config.paths);
 
-// HTML
-require('./gulp/tasks/html')(gulp, config.paths);
-
-// HTML5 validation
-require('./gulp/tasks/html5-lint')(gulp, config.paths.tmp);
+// PHP validation
+require('./gulp/tasks/phplint')(gulp, config.paths.php);
 
 // Images
 require('./gulp/tasks/images')(gulp, config);
