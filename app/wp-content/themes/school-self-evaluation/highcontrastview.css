@@ -1,0 +1,346 @@
+/*
+
+	Theme Name: Department of Education and Skills School Self-Evaluation
+	Theme URI: http://www.simonfinney.ie
+	Author: Simon Finney
+	Author URI: http://www.simonfinney.ie
+	Description: This is the Department of Education and Skills School Self-Evaluation high contrast view theme for WordPress.
+	Version: 1.0
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: departmentofeducationandskillsschoolself-evaluation
+
+*/
+
+/* Main */
+
+html, body { height: 100%; }
+
+body {
+	font: .812em Helvetica, Arial, sans-serif;
+	line-height: 1.333em;
+}
+
+body, .highcontrastview { background: black; }
+
+a { color: cyan; }
+
+a:hover { color: lime; }
+
+h1 {
+	font-size: 1.85em;
+	padding: 0 10px 7px 26px;
+}
+
+h1, header { border-bottom: 3px solid white; }
+
+body, h1, h2, h3, .highcontrastview, .highcontrastview:hover { color: yellow; }
+
+h2 {
+	font-size: 1.4em;
+	padding-top: 5px;
+}
+
+h2, h3, .school-updates { padding-left: 26px; }
+
+h3 { font-size: 1.25em; }
+
+/* Header */
+
+#header-holder, #main, body, footer { margin: 0 auto; }
+
+#header-holder, #main, footer { width:940px; }
+
+#header-left {
+	margin-top: 4.5%; 
+	width: 76%;
+}
+
+#header-left nav {
+	position: absolute;
+}
+
+#header-left img { margin-bottom: 4.5%; }
+
+#header-right {
+	padding-top: .5%;
+	width: 24%;
+}
+
+#inspectorate { padding: 5% 0; }
+
+#inspectorate, #inspectorate-footer, .vimeo { display: block; }
+
+#text { padding: 3px; }
+
+#text, .submit, img { border: none; }
+
+.highcontrastview, .largetextsize, .normaltextsize {
+	cursor: pointer;
+	height: 15px;
+	margin-left: 5px;
+	width: 17px;
+}
+
+#text, .largetextsize, .normaltextsize, .largetextsize:hover, .normaltextsize:hover, nav li a, nav li a:hover { color: black; }
+
+.highcontrastview, .largetextsize {
+	font-size: 1.3em;
+	line-height: 15px;
+	padding: 1px 0;
+}
+
+.language { margin: 0 9% 2.5% .5%; }
+
+.language, footer { font-size: .95em; }
+
+.largetextsize, .normaltextsize, #text { background: white; }
+
+.normaltextsize {
+	font-size: .9em;
+	padding: 2px 0 0;
+}
+
+.submit {
+	font-size: 14px;
+	margin: 0 0 0 -6px;
+	padding: 2% 0;
+}
+
+.largetextsize:hover, .normaltextsize:hover, .submit, nav li a:hover, nav li.current_page_item a { background: lime; }
+
+.submit, #inspectorate-footer p {
+	text-transform: uppercase;
+}
+
+.twitter { margin-right: 10%; }
+
+header, #content { overflow: hidden; }
+
+nav li {
+	font-size: 1.07em;
+	margin-bottom: 11px;
+}
+
+nav li a {
+	background: cyan;
+	padding: 11px 13px;
+}
+
+/* Content */
+
+#content li {
+	list-style-image: url('images/bullet.gif');
+	margin-bottom: 1.5%;
+}
+
+#adobe-pdf li, #content li { list-style-type: square; }
+
+#adobe-pdf li { list-style-image: url('images/pdficon_small.png'); }
+
+#col1 { border-right: 3px solid white; }
+
+#col1, #col1-resources, #col2-resources { width: 50%; }
+
+#col1-gaeilge { width: 46%; }
+
+#col1, #col1-gaeilge, #col1-resources, #col2-resources, #content img, #footer-left ,#header-left, #questions, #search-result, .previous, .vmcplayer, nav li { float: left; }
+
+#col1 #questions, #col1-gaeilge #questions { 
+	margin-left: 5%;
+	width: 84%; 
+}
+
+#col1 h1, #col1-gaeilge h1 { width: 93%; }
+
+#col2 { 
+	margin-right: 3.5%;
+	width: 45%;
+}
+
+#col2, #footer-right, #header-right, #inspectorate,  #searchform, #sidebar, .highcontrastview, .language, .largetextsize, .next, .normaltextsize, .right img, .twitter { float: right; }
+
+#col2 li, #footer-left ul, #questions li, #sidebar .questions li, nav ul { list-style-type: none; }
+
+#col2 li, #questions li, #sidebar .questions li { list-style-image: none; }
+
+#content img { padding: 0 20px 10px 0; }
+
+#main { min-height: 45%; }
+
+#main, #sidebar, footer { overflow: auto; }
+
+#questions {
+	font-size: 1em;
+	line-height: 1.2em;
+	padding: 3% 1% 0 6%;
+	width: 96%;
+}
+
+#questions, .highcontrastview { border: 1px solid white; }
+
+#questions li {
+	margin: 0 0 3% 15px;
+}
+
+#search-result {
+	border: 1px solid white;
+	margin-bottom: 2%;	
+	margin-left: 4%;
+	padding: 2%;
+	width: 92%;
+}
+
+#search-result a, #text { font-size: 1.1em; }
+
+#search-result a { margin-bottom: 50%; }
+
+#sidebar {
+	height: inherit;
+	width: 32%;
+}
+
+.questions {
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;	
+	border-right: 1px solid white;
+	margin-top: 0;
+	padding: 13px 0;
+}
+
+#sidebar ul { padding-left: 10%; }
+
+.breadcrumb { padding-top: 9px; }
+
+.breadcrumb, .content p, .contactform, .mailsend { margin-left: 26px; }
+
+.content { width: 66%; }
+
+.content #questions {
+	margin-left: 4.5%;
+	width: 88%;
+}
+
+.content #questions li { margin-right: 3%; }
+
+.next { margin: 1% 0; }
+
+.note { clear: both; }
+
+.note, .vimeo { margin-left: 20px; }
+
+.previous { margin: 1% 0 1% 5%; }
+
+.school-updates li { padding-right: 15px; }
+
+.top { padding-top: 8px; }
+
+div.thumbnails {
+	float: left;
+	padding: 0 1%;
+	width: 100%;
+}
+
+div.thumbnail {
+	float: left;
+	margin: 0 1% 0 0;
+	min-height: 160px;
+	width: 49%;	
+}
+
+div#content div.thumbnail img {
+	height: 100px;
+	padding: 0;
+	width: 178px;
+}
+
+div.thumbnail p {
+	float: left;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 14px;
+	margin: 5px 0 0;
+	width: 99%;
+}
+
+/* Footer */
+
+#adobe {
+	bottom: 0;
+	position: fixed;
+	right: 0;
+}
+
+#footer-left { margin-left: 1%; }
+
+#footer-left li { margin-right: 1.5%; }
+
+#footer-left li, .highcontrastview, .largetextsize, .normaltextsize, .school-updates li { display: inline; }
+
+#footer-left ul, #col2 h2, #inspectorate-footer, #search-result p { margin: 0; }
+
+#footer-left ul, #col2 h2, #inspectorate-footer, nav ul { padding: 0; }
+
+#footer-left, #footer-right { width: 44%; }
+
+#footer-right span { margin-right: .5%; }
+
+#inspectorate-footer, #questions, #search-result a ,#sidebar .questions, .bold, .highcontrastview, .largetextsize, .submit, h1, h2, nav li { font-weight: 700; }
+
+#inspectorate-footer, .highcontrastview, .largetextsize, .normaltextsize, .vimeo { text-align: center; }
+
+#inspectorate-footer, .vimeo { width: 100%; }
+
+footer { 
+	border-top: 3px solid white;
+	padding-bottom: .5%; 
+}
+
+#content .btn {
+	border: 1px solid #FFF;
+	border-radius: 10px;
+	float: left;
+	margin: 10px 0 0 35px;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	width: 50%;
+}
+
+#content a.btn:hover {
+	opacity: .9;
+}
+
+/* Internet Explorer 6-8 */
+
+#ie6 header ul, #ie7 header ul { margin-left: 0; }
+
+#ie6 header li, #ie7 header li { 
+	padding-bottom: 8px; 
+	padding-top: 8px; 
+}
+
+#ie6 #header-left, #ie7 #header-left, #ie8 #header-left { width: 73%; }
+
+#ie6 #header-left img, #ie7 #header-left img { margin-bottom: 0; }
+
+#ie8 #header-left img { margin-bottom: 5%; }
+
+#ie6 #header-right, #ie7 #header-right, #ie8 #header-right { width: 27%; }
+
+#ie6 .submit, #ie7 .submit { padding-top: 0; }
+
+#ie6 .content { width: 65%; }
+
+#ie6 #col1 #questions, #ie6 #questions { margin-left: 1.5%; }
+
+#ie6 .question, #ie7 .questions { margin: 2% 1.5% 2% 0; }
+
+#ie6 #sidebar ul { padding-left: 3%; }
+
+#ie6 #inspectorate-footer, #ie7 #inspectorate-footer { padding: 1% 0; }
+
+#ie7 #header-left nav { 
+	position: relative; 
+	top: 26px;
+}
