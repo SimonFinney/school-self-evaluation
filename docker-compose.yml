@@ -1,0 +1,28 @@
+version: '2'
+services:
+
+  mysql:
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    image: mariadb
+
+  phpmyadmin:
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: example
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql
+    ports:
+      - 8181:80
+    restart: always
+    volumes:
+      - /sessions
+
+  wordpress:
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+    image: wordpress
+    ports:
+      - 8080:80
