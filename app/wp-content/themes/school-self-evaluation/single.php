@@ -1,29 +1,35 @@
 <?php
-	/**
- 	 * The Template for displaying all single posts.
- 	 *
- 	 * @package WordPress
- 	 * @subpackage Department_of_Education_and_Skills_School_Self-Evaluation
- 	 * @since Department of Education and Skills School Self-Evaluation 1.0
- 	 */
+/**
+ * The template for displaying all single posts.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package School_Self-Evaluation
+ */
 
-	get_header();
-	get_sidebar();
-	if (get_bloginfo('description') == "Primary Schools") $description =  __("<!--:en-->Primary Schools<!--:--><!--:ga-->Bunscoileanna<!--:-->");
-	else $description =  __("<!--:en-->Post-Primary Schools<!--:--><!--:ga-->Iar-Bunscoileanna<!--:-->"); 
-?>
+get_header(); ?>
 
-<p class="breadcrumb"><a href="<?php _e("<!--:en-->http://schoolself-evaluation.ie/<!--:--><!--:ga-->http://schoolself-evaluation.ie/gaeilge.php<!--:-->"); ?>" title="<?php _e("<!--:en-->Primary Schools/Post-Primary Schools<!--:--><!--:ga-->Bunscoileanna/Iar-Bunscoileanna<!--:-->"); ?>"><?php echo $description; ?></a> / <?php echo get_the_title(); ?></p>
-<div class="content">
-<h1><?php echo get_the_title(); ?></h1>
-<?php 
-	while (have_posts()) : the_post();
-		the_content();
-?>	
-		<span class="previous"><?php next_post_link('%link', '%title'); ?></span>
-		<span class="next"><?php previous_post_link('%link', '%title'); ?></span>
-		</div>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<?php
+		while ( have_posts() ) : the_post();
+
+			get_template_part( 'template-parts/content', get_post_format() );
+
+			the_post_navigation();
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
+		?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
 <?php
-	endwhile; // end of the loop.
-	get_footer();
-?>
+get_sidebar();
+get_footer();
