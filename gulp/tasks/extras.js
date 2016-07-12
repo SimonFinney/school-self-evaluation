@@ -41,6 +41,6 @@ module.exports = function(gulp, paths) {
 
 
   gulp.task('extras', function() {
-    return rm(paths.app, paths.dist);
+    return rm(paths.app, paths.distDir);
   });
 };
