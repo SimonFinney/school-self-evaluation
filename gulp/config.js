@@ -21,7 +21,7 @@ const paths = new (function() {
     images: `**/*.{${imageExtensions}}`,
   };
 
-  this.php = `${this.basePath}**/*.php`;
+  this.php = `${this.app}**/*.php`;
   this.js = `${this.app}js/`;
   this.scss = `${this.app}scss/**/*.scss`;
 });

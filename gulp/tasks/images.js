@@ -4,14 +4,10 @@
 
 const imagemin = require('gulp-imagemin');
 
-module.exports = function(gulp, config) {
-
-
-  gulp.task('images', function() {
-
-
-    return gulp.src(config.paths.app + config.paths.extras.images)
+module.exports = (gulp, config) =>
+  gulp.task('images', () =>
+    gulp.src(`${config.paths.app}${config.paths.extras.images}`)
       .pipe(imagemin(config.imagemin))
       .pipe(gulp.dest(config.paths.distDir));
-  });
+  );
 };

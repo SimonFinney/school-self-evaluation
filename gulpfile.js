@@ -22,6 +22,9 @@ require('./gulp/tasks/eslint')(gulp, config.paths.js);
 // Extras
 require('./gulp/tasks/extras')(gulp, config.paths);
 
+// PHP
+require('./gulp/tasks/php')(gulp, config.paths);
+
 // PHP validation
 require('./gulp/tasks/phplint')(gulp, config.paths.php);
 

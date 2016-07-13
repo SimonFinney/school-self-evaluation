@@ -3,14 +3,13 @@
 'use strict';
 
 
-module.exports = function(gulp, paths) {
+function appendPath(sourcePath, property) {
+  return `${sourcePath}${property}`;
+}
 
+
+module.exports = (gulp, paths) => {
   const extras = paths.extras;
-
-
-  function appendPath(sourcePath, property) {
-    return sourcePath + property;
-  }
 
 
   function rm(sourcePath, destinationPath) {
@@ -34,13 +33,12 @@ module.exports = function(gulp, paths) {
         e.push(appendPath(sourcePath, extras[extra]));
       }
     }
+    
 
     return gulp.src(e, { base: sourcePath })
       .pipe(gulp.dest(destinationPath));
   }
 
 
-  gulp.task('extras', function() {
-    return rm(paths.app, paths.distDir);
-  });
+  gulp.task('extras', () => rm(paths.app, paths.distDir));
 };
