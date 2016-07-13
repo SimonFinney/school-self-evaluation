@@ -23,5 +23,5 @@ module.exports = (gulp, config) =>
       .pipe(rtlcss())
       .pipe(rename({ basename: 'rtl' }))
       .pipe(gulp.dest(config.paths.basePath))
-      .pipe(browserSync.stream());
+      .pipe(browserSync.stream())
   );

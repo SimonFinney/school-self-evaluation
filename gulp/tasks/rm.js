@@ -4,5 +4,5 @@
 
 module.exports = (gulp, runSequence) =>
   gulp.task('rm', done =>
-    runSequence('clean', 'sass', 'js', 'extras', done)
+    runSequence('clean', 'php', 'sass', 'js', 'extras', done)
   );
