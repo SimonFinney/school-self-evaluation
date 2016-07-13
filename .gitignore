@@ -6,9 +6,12 @@ bower_components
 node_modules
 
 # Output folders
+dist
 
 # Always-ignore files
 *.log
 
 # Individual folders and files
 **/.DS_Store
+data
+logs

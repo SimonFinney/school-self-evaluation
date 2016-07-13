@@ -2,14 +2,16 @@ services:
 
   mysql:
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: password
     image: mariadb
+    volumes:
+    - ./data:/docker-entrypoint-initdb.d
 
   phpmyadmin:
     environment:
       PMA_HOST: mysql
       PMA_USER: root
-      PMA_PASSWORD: example
+      PMA_PASSWORD: password
     image: phpmyadmin/phpmyadmin
     links:
       - mysql
@@ -21,9 +23,11 @@ services:
 
   wordpress:
     environment:
-      WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DB_PASSWORD: password
     image: wordpress
     ports:
       - 8080:80
+    volumes:
+      - ./app/wp-content/themes/school-self-evaluation:/var/www/html/wp-content/themes/school-self-evaluation
 
 version: '2'
