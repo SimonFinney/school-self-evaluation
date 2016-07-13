@@ -4,6 +4,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
     image: mariadb
+    volumes:
+    - ./data:/docker-entrypoint-initdb.d
 
   phpmyadmin:
     environment:
