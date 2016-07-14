@@ -20,6 +20,7 @@ module.exports = (gulp, config) =>
       .pipe(autoprefixer(config.autoprefixer))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(config.paths.basePath))
+      .pipe(browserSync.stream())
       .pipe(rtlcss())
       .pipe(rename({ basename: 'rtl' }))
       .pipe(gulp.dest(config.paths.basePath))

@@ -12,7 +12,7 @@
 
 ?>
 
-	</div><!-- #content -->
+	</main><!-- #content -->
 	</div><!-- #main -->
 		<footer>
 			<div id="inspectorate-footer">
@@ -32,7 +32,7 @@
 		<!--[if lt IE 9]>
 			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
 		<![endif]-->
-		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/styleswitcher.js"></script>	
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/styleswitcher.js"></script>
 		<script>
 			!function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';

@@ -12,14 +12,24 @@
   Text Domain: school-self-evaluation
 */
 
+// Utilities
+@import 'utils/variables';
+
 /*-------------------
 >>> Table of Contents
 ---------------------
 1.0 Imports
 2.0 Typography
+3.0 Elements
 --------------------*/
 
 /*----- 1.0 Imports -----*/
-@import 'imports/underscores.me';
 
 /*----- 2.0 Typography -----*/
+
+/*----- 3.0 Elements -----*/
+@import
+'elements/body',
+'elements/header',
+'elements/h1',
+'elements/main';
