@@ -1,1 +1,44 @@
 // Navigation
+
+.header__nav {}
+
+%menu-item--active {
+  color: $brand-primary-dark;
+  background: $lightest;
+}
+
+.header__nav__list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  .menu-item {
+    float: left;
+
+    &.current-menu-item {
+
+      a {
+        @extend %menu-item--active;
+      }
+    }
+
+    a {
+      padding: 16px 24px;
+      color: $lightest;
+      background: linear-gradient($header-gradient-end 0, $brand-primary-dark 100%);
+      border: 1px solid $brand-primary-dark;
+      transition: .3s;
+
+      &:hover {
+        @extend %menu-item--active;
+        text-decoration: none;
+      }
+    }
+
+  }
+}
+
+.menu-item {
+  display: inline;
+}

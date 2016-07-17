@@ -13,7 +13,9 @@
 */
 
 // Utilities
-@import 'utils/variables';
+@import
+'utils/variables',
+'utils/mixins';
 
 /*-------------------
 >>> Table of Contents
@@ -29,8 +31,10 @@
 
 /*----- 3.0 Elements -----*/
 @import
+'elements/a',
 'elements/body',
 'elements/header',
+'elements/html',
 'elements/h1',
 'elements/main';
 

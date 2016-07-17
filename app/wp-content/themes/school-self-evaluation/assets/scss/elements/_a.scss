@@ -1,0 +1,11 @@
+// Link
+
+a {
+  font-weight: bold;
+  color: $brand-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

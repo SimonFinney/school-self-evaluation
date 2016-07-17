@@ -4,7 +4,10 @@
 $background: #f4f4f4;
 $lightest: #fff;
 
-$header-gradient-start: #326598;
+$brand-primary: #326598;
+$brand-primary-dark: #022A5D;
+
+$header-gradient-start: $brand-primary;
 $header-gradient-end: #013467;
 
 // Typography
@@ -13,3 +16,6 @@ $font-family: (
   Arial,
   sans-serif
 );
+
+$font-size: 100%; // 16px / 16px
+$desired-font-size: 16;

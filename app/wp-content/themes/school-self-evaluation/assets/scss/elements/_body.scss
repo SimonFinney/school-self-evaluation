@@ -1,8 +1,12 @@
 // Body
 
 body {
+  $font-size: .875; // 14px / 16px
+  $line-height: 1.313; // 21px / 16px
+
+  @include calculate-type($font-size, $line-height);
+
   margin-right: 0;
   margin-left: 0;
-  font-family: $font-family;
   background-color: $background;
 }

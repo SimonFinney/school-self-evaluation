@@ -15,13 +15,18 @@
 
     <footer role="contentinfo">
       <span>Promoting the Quality of Learning</span>
-      <nav role="navigation">
-        <?php wp_nav_menu(
+      <?php
+        wp_nav_menu(
           array(
-            menu => 'footer'
+            container => 'nav',
+            container_class => 'footer__nav',
+            items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
+            menu => 'footer',
+            menu_class => 'footer__nav__list',
+            menu_id => 'footerNavList'
           )
-        ); ?>
-      </nav>
+        );
+      ?>
       <span>An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
     </footer>
     <?php wp_footer(); ?>

@@ -1,0 +1,13 @@
+// Mixins
+
+// Calculates font size and line height
+@mixin calculate-type($font-size, $line-height: $font-size) {
+  @include rem-property(font-size, $font-size);
+  @include rem-property(line-height, $line-height);
+}
+
+// Calculates rem for a property with a pixel fallback
+@mixin rem-property($property, $value, $divider: 1) {
+  #{$property}: (($value * $desired-font-size) / $divider) + px;
+  #{$property}:  ($value / $divider) + rem;
+}
