@@ -43,9 +43,12 @@ function school_self_evaluation_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'school-self-evaluation' ),
-	) );
+	register_nav_menus(
+    array(
+		    'navigation' => esc_html__('Navigation'),
+        'footer' => esc_html__('Footer')
+	  )
+  );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -59,11 +62,6 @@ function school_self_evaluation_setup() {
 		'caption',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'school_self_evaluation_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'school_self_evaluation_setup' );
@@ -115,11 +113,6 @@ function school_self_evaluation_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'school_self_evaluation_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

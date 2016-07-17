@@ -27,7 +27,7 @@
       </h1>
 
       <nav role="navigation">
-        <?php wp_nav_menu(array('menu')); ?>
+        <?php wp_nav_menu(array('navigation')); ?>
       </nav>
 
       <ul>
@@ -42,7 +42,7 @@
         </li>
       </ul>
 
-      <a href="#">Change the language</a>
+      <a href="/ga">Change the language</a>
 
       <?php get_search_form(); ?>
 

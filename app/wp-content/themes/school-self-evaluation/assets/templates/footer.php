@@ -11,18 +11,15 @@
 
 ?>
 
-	</div><!-- #content -->
+  	</main>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'school-self-evaluation' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'school-self-evaluation' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'school-self-evaluation' ), 'school-self-evaluation', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
+    <footer role="contentinfo">
+      <span>Promoting the Quality of Learning</span>
+      <nav role="navigation">
+        <?php wp_nav_menu(array('footer')); ?>
+      </nav>
+      <span>An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
+    </footer>
+    <?php wp_footer(); ?>
+  </body>
 </html>
