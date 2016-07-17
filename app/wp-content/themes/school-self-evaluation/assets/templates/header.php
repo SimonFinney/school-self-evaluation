@@ -27,7 +27,7 @@
       </h1>
 
       <nav role="navigation">
-        <?php wp_nav_menu(array('navigation')); ?>
+        <?php wp_nav_menu(array(menu => 'navigation')); ?>
       </nav>
 
       <ul>
