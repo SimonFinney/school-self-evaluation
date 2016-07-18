@@ -19,7 +19,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class(); ?>>
+  <body <?php body_class(); ?> data-app>
 
     <header class="header" role="banner">
       <h1>
@@ -39,15 +39,15 @@
         );
       ?>
 
-      <ul>
-        <li>
-          <button>High contrast view</button>
+      <ul class="layout-list">
+        <li class="layout-list__item">
+          <button class="layout-list__button" data-class="high-contrast">High contrast view</button>
         </li>
-        <li>
-          <button>Large text size</button>
+        <li class="layout-list__item">
+          <button class="layout-list__button" data-class="large-text-size">Large text size</button>
         </li>
-        <li>
-          <button>Normal text size</button>
+        <li class="layout-list__item">
+          <button class="layout-list__button" data-class>Normal text size</button>
         </li>
       </ul>
 
