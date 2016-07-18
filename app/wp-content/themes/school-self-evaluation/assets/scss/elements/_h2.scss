@@ -1,0 +1,10 @@
+// H2
+
+h2 {
+  $font-size: 2.25; // 36px / 16px
+  $line-height: 2.5; // 40px / 16px
+
+  @include calculate-type($font-size, $line-height);
+
+  color: $brand-secondary;
+}
