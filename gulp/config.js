@@ -22,7 +22,7 @@ const paths = new (function() {
   };
 
   this.php = `${this.app}templates/**/*.php`;
-  this.js = `${this.app}js/`;
+  this.js = `${this.app}js/**`;
   this.scss = `${this.app}scss/**/*.scss`;
 });
 
