@@ -18,4 +18,4 @@ data
 logs
 
 # Folders and files not to ignore
-app/wp-content/themes/school-self-evaluation
+!app/wp-content/themes/school-self-evaluation
