@@ -30,6 +30,7 @@
       border: 1px solid $brand-primary-dark;
       transition: .3s;
 
+      &:focus,
       &:hover {
         @extend %menu-item--active;
         text-decoration: none;
