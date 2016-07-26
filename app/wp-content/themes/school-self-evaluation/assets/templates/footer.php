@@ -13,8 +13,8 @@
 
   	</main>
 
-    <footer role="contentinfo">
-      <span>Promoting the Quality of Learning</span>
+    <footer class="footer" role="contentinfo">
+      <span class="footer__tagline">Promoting the Quality of Learning</span>
       <?php
         wp_nav_menu(
           array(
@@ -27,7 +27,7 @@
           )
         );
       ?>
-      <span>An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
+      <span class="footer__meta">An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
     </footer>
     <?php wp_footer(); ?>
   </body>

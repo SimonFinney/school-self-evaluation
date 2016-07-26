@@ -15,6 +15,7 @@
 // Utilities
 @import
 'utils/variables',
+'utils/extends',
 'utils/mixins';
 
 /*-------------------
@@ -22,19 +23,24 @@
 ---------------------
 1.0 Imports
 2.0 Typography
-3.0 Elements
-4.0 Navigation
-5.0 Components
+3.0 Layout
+4.0 Elements
+5.0 Navigation
+6.0 Components
 --------------------*/
 
 /*----- 1.0 Imports -----*/
 
 /*----- 2.0 Typography -----*/
 
-/*----- 3.0 Elements -----*/
+/*----- 3.0 Layout -----*/
+@import 'layout/layout';
+
+/*----- 4.0 Elements -----*/
 @import
 'elements/a',
 'elements/body',
+'elements/footer',
 'elements/header',
 'elements/html',
 'elements/h1',
@@ -42,8 +48,10 @@
 'elements/h3',
 'elements/main';
 
-/*----- 4.0 Navigation -----*/
-@import 'components/navigation';
+/*----- 5.0 Navigation -----*/
+@import
+'components/navigation',
+'components/search-form';
 
-/*----- 5.0 Components -----*/
+/*----- 6.0 Components -----*/
 @import 'components/layout-list';

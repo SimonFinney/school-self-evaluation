@@ -1,17 +1,20 @@
 // Layout list
 
 .layout-list {
+  position: absolute;
+  top: 0;
+  right: 0;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  list-style: none;
+}
+
+.layout-list__item {
+  display: inline;
 }
 
 .layout-list__button {
-  width: 40px;
-  height: 40px;
+  @extend %button--touch;
   text-indent: -9999px;
-  cursor: pointer;  
-  background-position: top center;
-  background-repeat: no-repeat;
-  border: 0;
 }

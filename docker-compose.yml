@@ -29,5 +29,7 @@ services:
       - 8080:80
     volumes:
       - ./app/:/var/www/html
+      - ./httpd.conf:/etc/httpd/conf/httpd.conf
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
 version: '2'

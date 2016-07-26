@@ -1,9 +1,6 @@
 // Main
 
 main {
-  max-width: 768px;
-  padding: 24px;
-  margin-right: auto;
-  margin-left: auto;
+  @extend %container;
   background-color: $lightest;
 }

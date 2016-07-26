@@ -22,39 +22,41 @@
   <body <?php body_class(); ?> data-app>
 
     <header class="header" role="banner">
-      <h1>
-        <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home"><?php bloginfo('name'); ?></a>
-      </h1>
+      <section class="header__section">
+        <h1 class="header__masthead">
+          <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home"><?php bloginfo('name'); ?></a>
+        </h1>
 
-      <?php
-        wp_nav_menu(
-          array(
-            container => 'nav',
-            container_class => 'header__nav',
-            items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
-            menu => 'navigation',
-            menu_class => 'header__nav__list',
-            menu_id => 'headerNavList'
-          )
-        );
-      ?>
+        <?php
+          wp_nav_menu(
+            array(
+              container => 'nav',
+              container_class => 'header__nav',
+              items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
+              menu => 'navigation',
+              menu_class => 'header__nav__list',
+              menu_id => 'headerNavList'
+            )
+          );
+        ?>
 
-      <ul class="layout-list">
-        <li class="layout-list__item">
-          <button class="layout-list__button" data-class="high-contrast">High contrast view</button>
-        </li>
-        <li class="layout-list__item">
-          <button class="layout-list__button" data-class="large-text-size">Large text size</button>
-        </li>
-        <li class="layout-list__item">
-          <button class="layout-list__button" data-class>Normal text size</button>
-        </li>
-      </ul>
+        <ul class="layout-list">
+          <li class="layout-list__item">
+            <button class="layout-list__button" data-class="high-contrast">High contrast view</button>
+          </li>
+          <li class="layout-list__item">
+            <button class="layout-list__button" data-class="large-text-size">Large text size</button>
+          </li>
+          <li class="layout-list__item">
+            <button class="layout-list__button" data-class>Normal text size</button>
+          </li>
+        </ul>
 
-      <a href="/ga">Change the language</a>
+        <a href="/ga">As Gaeilge</a>
 
-      <?php get_search_form(); ?>
+        <?php get_search_form(); ?>
 
-      <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/images/#">
+        <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/images/#">
+      </section>
     </header>
     <main>

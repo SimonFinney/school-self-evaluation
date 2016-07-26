@@ -1,5 +1,21 @@
 // Header
 
 .header {
+  @extend %color--light;
+
+  position: relative;
   background: linear-gradient($header-gradient-start 0, $header-gradient-end 100%);
+  box-shadow: 0 0 4px 1px $background-darkest;
+}
+
+.header__section {
+  @extend %container;
+  position: relative;
+}
+
+.header__masthead {
+
+  /* margin-top: 0;
+  margin-bottom: 0; */
+
 }
