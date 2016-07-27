@@ -12,24 +12,21 @@
  * @package School_Self-Evaluation
  */
 
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
+get_header();
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<!-- <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1> -->
 				</header>
 
 			<?php
 			endif;
 
+      $post_query = new WP_Query('posts_per_page=1');
+
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( $post_query -> have_posts() ) : $post_query -> the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -47,9 +44,6 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 get_sidebar();
