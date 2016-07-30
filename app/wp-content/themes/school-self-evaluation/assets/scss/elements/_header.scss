@@ -14,6 +14,10 @@
   position: relative;
 }
 
+.header__masthead {
+  display: inline-block;
+}
+
 .header__link {
 
   &:hover {

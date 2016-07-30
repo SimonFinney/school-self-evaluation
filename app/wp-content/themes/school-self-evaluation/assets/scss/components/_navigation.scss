@@ -1,32 +1,38 @@
 // Navigation
 
-.header__nav {}
-
 %menu-item--active {
   color: $brand-primary-dark;
   background: $lightest;
 }
 
 .header__nav__list {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  list-style: none;
+  @extend %reset--ul;
 
   .menu-item {
     float: left;
 
-    &.current-menu-item {
+    &:hover {
 
-      a {
+      .sub-menu {
+        opacity: 1;
+      }
+    }
+
+    &.current-menu-item,
+    &.current-menu-parent {
+
+      > a {
         @extend %menu-item--active;
       }
     }
 
     a {
-      padding: 16px 24px;
+      display: block;
+      padding: 8px;
       background: linear-gradient($header-gradient-end 0, $brand-primary-dark 100%);
-      border: 1px solid $brand-primary-dark;
+      border-top: 1px solid $brand-primary-dark;
+      border-right: 1px solid $brand-primary-dark;
+      border-left: 1px solid $brand-primary-dark;
       transition: .3s;
 
       &:focus,
@@ -40,5 +46,37 @@
 }
 
 .menu-item {
-  display: inline;
+  position: relative;
+}
+
+.sub-menu {
+  @extend %reset--ul;
+  position: absolute;
+  border: 1px solid $brand-primary-dark;
+  opacity: 0;
+  transition: .3s;
+
+  .menu-item {
+    width: 100%;
+    white-space: nowrap;
+
+    a {
+      padding: 8px;
+      color: $brand-primary-dark;
+      background: $lightest;
+      border: 0;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.current-menu-item {
+
+      a {
+        color: $brand-secondary;
+      }
+    }
+  }
 }

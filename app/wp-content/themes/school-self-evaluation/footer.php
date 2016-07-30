@@ -14,7 +14,10 @@
   	</main>
 
     <footer class="footer" role="contentinfo">
-      <span class="footer__tagline">Promoting the Quality of Learning</span>
+      <section class="footer__inspectorate-meta">
+        <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/image_inspectorate-logo.png">
+        <span class="footer__tagline">Promoting the Quality of Learning</span>
+      </section>
       <?php
         wp_nav_menu(
           array(

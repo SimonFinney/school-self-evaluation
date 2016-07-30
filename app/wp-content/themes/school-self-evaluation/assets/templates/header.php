@@ -56,7 +56,6 @@
 
         <?php get_search_form(); ?>
 
-        <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/images/#">
       </section>
     </header>
     <main>
