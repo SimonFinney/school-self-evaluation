@@ -9,7 +9,6 @@
   @extend %reset--ul;
 
   .menu-item {
-    float: left;
 
     &:hover {
 
@@ -47,6 +46,8 @@
 
 .menu-item {
   position: relative;
+  display: inline;
+  float: left;
 }
 
 .sub-menu {
