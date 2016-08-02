@@ -23,7 +23,7 @@
           array(
             container => 'nav',
             container_class => 'footer__nav',
-            items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
+            items_wrap => '<ul class="%2$s" role="navigation">%3$s</ul>',
             menu => 'footer',
             menu_class => 'footer__nav__list',
             menu_id => 'footerNavList'

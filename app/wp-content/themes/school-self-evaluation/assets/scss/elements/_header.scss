@@ -12,6 +12,8 @@
 .header__section {
   @extend %container;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header__masthead {

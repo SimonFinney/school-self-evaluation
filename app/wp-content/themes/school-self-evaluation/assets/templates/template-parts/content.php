@@ -9,24 +9,24 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article <?php post_class('article'); ?>>
 	<header class="entry__header">
 		<?php
-			if ( is_single() ) {
-				the_title( '<h2>', '</h2>' );
+			if (is_single()) {
+			  the_title('<h2>', '</h2>');
 			} else {
-				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			  the_title('<h2><a class="entry-header__link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>');
 			}
 
-		if ( 'post' === get_post_type() ) : ?>
-		<section class="entry-meta">
+		if ('post' === get_post_type()) : ?>
+		<section class="entry__meta">
 			<?php school_self_evaluation_posted_on(); ?>
-		</section><!-- .entry-meta -->
+		</section><!-- .entry__meta -->
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+	</header><!-- .entry__header -->
 
-	<div class="entry-content">
+	<section class="entry__content">
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
