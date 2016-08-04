@@ -39,9 +39,8 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
 
-	<!-- <footer class="entry-footer">
-		<?php school_self_evaluation_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+	<footer class="entry__footer">
+	   <?php school_self_evaluation_entry_footer(); ?>
+	</footer>
+</article>

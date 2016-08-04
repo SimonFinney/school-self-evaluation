@@ -11,22 +11,20 @@
 
 <article <?php post_class('article'); ?>>
 	<header class="entry__header">
-		<?php the_title( '<h2>', '</h2>' ); ?>
-	</header><!-- .entry-header -->
+		<?php the_title('<h2>', '</h2>'); ?>
+	</header>
 
-	<div class="entry-content">
-		<?php
-			the_content();
+	<?php
+		the_content();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'school-self-evaluation' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'school-self-evaluation' ),
+			'after'  => '</div>',
+		) );
+	?>
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry__footer">
 			<?php
 				edit_post_link(
 					sprintf(
@@ -38,6 +36,6 @@
 					'</span>'
 				);
 			?>
-		</footer><!-- .entry-footer -->
+		</footer>
 	<?php endif; ?>
-</article><!-- #post-## -->
+</article>

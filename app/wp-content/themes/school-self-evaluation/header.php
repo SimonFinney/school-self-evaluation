@@ -11,7 +11,7 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> data-app>
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,28 +19,35 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class(); ?> data-app>
+  <body <?php body_class(); ?>>
 
     <header class="header" role="banner">
       <section class="header__section">
         <h1 class="header__masthead">
           <a class="header__link" href="<?php echo esc_url( home_url('/') ); ?>" rel="home"><?php bloginfo('name'); ?></a>
         </h1>
-        <ul class="layout-list">
-          <li class="layout-list__item">
-            <button class="layout-list__button" data-class="high-contrast">High contrast view</button>
-          </li>
-          <li class="layout-list__item">
-            <button class="layout-list__button" data-class="large-text-size">Large text size</button>
-          </li>
-          <li class="layout-list__item">
-            <button class="layout-list__button" data-class>Normal text size</button>
-          </li>
-        </ul>
 
-        <a href="/ga">As Gaeilge</a>
+        <section class="header__user-controls">
+          <a href="#">Gaeilge</a>
 
-        <?php get_search_form();
+          <?php get_search_form(); ?>
+
+          <ul class="layout-list">
+            <li class="layout-list__item">
+              <button class="layout-list__button" data-class>Normal text size</button>
+            </li>
+
+            <li class="layout-list__item">
+              <button class="layout-list__button" data-class="large-text-size">Large text size</button>
+            </li>
+
+            <li class="layout-list__item">
+              <button class="layout-list__button" data-class="high-contrast">High contrast view</button>
+            </li>
+          </ul>
+        </section>
+
+        <?php
 
           wp_nav_menu(
             array(
@@ -53,7 +60,7 @@
             )
           );
         ?>
-
       </section>
     </header>
     <main class="main" role="main">
+      <section class="main__content">

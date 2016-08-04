@@ -2,8 +2,5 @@
 
 .main {
   @extend %container;
-  display: flex;
-  padding-top: 16px;
-  padding-bottom: 16px;
   background-color: $lightest;
 }

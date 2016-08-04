@@ -5,13 +5,14 @@
 
   position: relative;
   padding-top: 16px;
+  padding-right: 24px;
+  padding-left: 24px;
   background: linear-gradient($header-gradient-start 0, $header-gradient-end 100%);
   box-shadow: 0 0 4px 1px $background-darkest;
 }
 
 .header__section {
   @extend %container;
-  position: relative;
   display: flex;
   flex-wrap: wrap;
 }
@@ -25,4 +26,12 @@
   &:hover {
     text-decoration: none;
   }
+}
+
+.header__user-controls {
+  display: flex;
+  height: 0;
+  margin-top: 8px;
+  margin-left: auto;
+  align-items: center;
 }

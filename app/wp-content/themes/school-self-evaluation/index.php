@@ -23,7 +23,7 @@ get_header();
 			<?php
 			endif;
 
-      $post_query = new WP_Query('posts_per_page=1');
+      $post_query = new WP_Query('posts_per_page=5');
 
 			/* Start the Loop */
 			while ( $post_query -> have_posts() ) : $post_query -> the_post();

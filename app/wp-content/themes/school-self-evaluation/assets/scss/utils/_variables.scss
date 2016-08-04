@@ -8,12 +8,22 @@ $lightest: #fff;
 $darkest: #121212;
 
 $brand-primary: #326598;
+$brand-primary-light: #cbdbe8;
 $brand-primary-dark: #022a5d;
 
 $brand-secondary: #be2222;
 
 $header-gradient-start: $brand-primary;
 $header-gradient-end: #013467;
+
+// High contrast
+$high-contrast-background: #000;
+$high-contrast-body: #ff0;
+
+// Breakpoints
+$breakpoints: (
+  'medium': 'only screen and (min-width: 768px)'
+);
 
 // Typography
 $font-family: (

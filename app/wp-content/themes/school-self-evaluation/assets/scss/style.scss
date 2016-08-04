@@ -15,8 +15,8 @@
 // Utilities
 @import
 'utils/variables',
-'utils/extends',
-'utils/mixins';
+'utils/mixins',
+'utils/extends';
 
 /*-------------------
 >>> Table of Contents
@@ -32,6 +32,12 @@
 /*----- 1.0 Imports -----*/
 
 /*----- 2.0 Typography -----*/
+@import
+'utils/typography',
+'elements/h1',
+'elements/h2',
+'elements/h3';
+
 
 /*----- 3.0 Layout -----*/
 @import 'layout/layout';
@@ -40,14 +46,14 @@
 @import
 'elements/a',
 'elements/article',
+'elements/aside',
 'elements/body',
 'elements/footer',
 'elements/header',
 'elements/html',
-'elements/h1',
-'elements/h2',
-'elements/h3',
-'elements/main';
+'elements/main',
+'elements/section',
+'elements/ul';
 
 /*----- 5.0 Navigation -----*/
 @import
