@@ -37,7 +37,7 @@
   }
 
   &[data-class='high-contrast'] {
-    background-color: $high-contrast-background;
     color: $high-contrast-body;
+    background-color: $high-contrast-background;
   }
 }

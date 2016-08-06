@@ -6,6 +6,6 @@ h3 {
 
   @include calculate-type($font-size, $line-height);
 
-  color: $brand-primary-dark;
   font-weight: 300;
+  color: $brand-primary-dark;
 }

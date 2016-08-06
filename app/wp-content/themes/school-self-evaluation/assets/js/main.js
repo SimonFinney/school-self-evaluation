@@ -8,9 +8,23 @@ import {
 
 
 const app = getElement('[data-app]');
-const styleButtons = getElements('[data-class]');
+const styleButtons = getElements('[data-class]', app);
+const subnavigationLinks = getElements('.sub-menu a', app);
 
 let currentStyleClass = null;
+
+
+function toggleSubnavigationFocus(event) {
+  const isFocusEvent = (event.type === 'focus');
+
+  const subnavigationMenu = event.target
+    .parentNode
+    .parentNode;
+
+  isFocusEvent ?
+    subnavigationMenu.setAttribute('data-active', '') :
+    subnavigationMenu.removeAttribute('data-active');
+}
 
 
 function toggleStyles(event) {
@@ -31,6 +45,12 @@ function toggleStyles(event) {
 
 function init() {
   forEachElement(styleButtons, styleButton => styleButton.addEventListener('click', toggleStyles));
+
+  // Handles tab navigation through the subnavigation
+  forEachElement(subnavigationLinks, subnavigationLink => {
+    subnavigationLink.addEventListener('focus', toggleSubnavigationFocus);
+    subnavigationLink.addEventListener('blur', toggleSubnavigationFocus);
+  });
 }
 
 
