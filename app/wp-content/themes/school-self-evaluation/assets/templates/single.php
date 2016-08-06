@@ -8,13 +8,24 @@
  */
 
 get_header();
+?>
 
-while (have_posts()) : the_post(); // Begin the loop
+<section class="content__article">
 
-	get_template_part( 'template-parts/content', get_post_format());
-	the_post_navigation();
+  <?php
 
-endwhile; // End of the loop
+  while (have_posts()) : the_post(); // Begin the loop
+
+    get_template_part( 'template-parts/content', get_post_format());
+    the_post_navigation();
+
+  endwhile; // End of the loop
+  ?>
+
+</section>
+
+<?php
 
 get_sidebar();
 get_footer();
+?>

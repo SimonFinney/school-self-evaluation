@@ -13,6 +13,11 @@
  */
 
 get_header();
+?>
+
+<section class="content__article">
+
+  <?php
 
 while (have_posts()) : the_post(); // Begin the loop
 
@@ -20,5 +25,12 @@ while (have_posts()) : the_post(); // Begin the loop
 
 endwhile; // End of the loop
 
+?>
+
+</section>
+
+<?php
+
 get_sidebar();
 get_footer();
+?>

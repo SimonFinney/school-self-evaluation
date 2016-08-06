@@ -17,11 +17,17 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
-					<!-- <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1> -->
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 
 			<?php
+
 			endif;
+      ?>
+
+      <section class="content__article">
+
+      <?php
 
       $post_query = new WP_Query('posts_per_page=5');
 
@@ -43,8 +49,13 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+    ?>
+
+  </section>
 
 <?php
+
 get_sidebar();
 get_footer();
+?>

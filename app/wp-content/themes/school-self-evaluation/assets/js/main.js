@@ -46,7 +46,7 @@ function toggleStyles(event) {
 function init() {
   forEachElement(styleButtons, styleButton => styleButton.addEventListener('click', toggleStyles));
 
-  // Handles tab navigation through the subnavigation
+  // Handles tabbing through the subnavigation
   forEachElement(subnavigationLinks, subnavigationLink => {
     subnavigationLink.addEventListener('focus', toggleSubnavigationFocus);
     subnavigationLink.addEventListener('blur', toggleSubnavigationFocus);
