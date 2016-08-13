@@ -16,7 +16,7 @@
   text-indent: -9999px;
   content: 'A';
 
-  &:after {
+  &::after {
     position: absolute;
     top: 50%;
     left: 50%;

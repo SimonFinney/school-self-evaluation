@@ -4,11 +4,13 @@
   @extend %color--light;
 
   position: relative;
+  min-height: $header-min-height;
   padding-top: 16px;
   padding-right: 24px;
   padding-left: 24px;
   background: linear-gradient($header-gradient-start 0, $header-gradient-end 100%);
   box-shadow: 0 0 4px 1px $background-darkest;
+  box-sizing: border-box;
 }
 
 .header__section {
