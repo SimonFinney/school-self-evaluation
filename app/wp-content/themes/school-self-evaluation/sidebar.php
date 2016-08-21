@@ -6,10 +6,6 @@
  *
  * @package School_Self-Evaluation
  */
-
-if (!is_active_sidebar('sidebar-1')) {
-  return;
-}
 ?>
 
 <aside class="aside" role="complementary">

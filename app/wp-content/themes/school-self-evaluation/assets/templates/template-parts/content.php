@@ -15,7 +15,7 @@
 			if (is_single()) {
 			  the_title('<h2>', '</h2>');
 			} else {
-			  the_title('<h2><a class="entry-header__link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>');
+			  the_title('<h3><a class="entry-header__link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>');
 			}
 
 		if ('post' === get_post_type()) : ?>
