@@ -1,5 +1,9 @@
 // Layout list
 
+.language-list {
+  @extend %reset--ul;
+}
+
 .layout-list {
   @extend %reset--ul;
   display: flex;

@@ -28,9 +28,20 @@
         </h1>
 
         <section class="header__user-controls">
-          <a href="#">Gaeilge</a>
 
-          <?php get_search_form(); ?>
+          <?php
+
+          wp_nav_menu(
+            array(
+              container_class => 'language-container',
+              menu => 'language',
+              menu_class => 'language-list',
+              menu_id => 'languageList'
+            )
+          );
+
+          get_search_form();
+          ?>
 
           <ul class="layout-list">
             <li class="layout-list__item">
