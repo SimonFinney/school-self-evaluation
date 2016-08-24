@@ -11,7 +11,7 @@ const app = getElement('[data-app]');
 const styleButtons = getElements('[data-class]', app);
 const subnavigationLinks = getElements('.sub-menu a', app);
 
-let currentStyleClass = null;
+let currentStyleClass;
 
 
 function toggleSubnavigationFocus(event) {
@@ -40,10 +40,17 @@ function toggleStyles(event) {
   }
 
   currentStyleClass = styleClass;
+  localStorage.setItem('class', currentStyleClass);
 }
 
 
 function init() {
+  currentStyleClass = localStorage.getItem('class');
+
+  if (currentStyleClass) {
+    app.classList.add(currentStyleClass);
+  }
+
   forEachElement(styleButtons, styleButton => styleButton.addEventListener('click', toggleStyles));
 
   // Handles tabbing through the subnavigation
