@@ -47,6 +47,17 @@
 
   <?php
 
+    if (empty($post->post_content)) {
+  ?>
+
+  <p>
+    <?php esc_html_e("This section is currently being developed, please check back soon and we'll have added new material.", 'school-self-evaluation'); ?>
+  </p>
+
+  <?php
+
+    }
+
     the_content();
 
 		wp_link_pages( array(

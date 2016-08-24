@@ -15,7 +15,7 @@
 			if (is_single()) {
 			  the_title('<h2>', '</h2>');
 			} else {
-			  the_title('<h3><a class="entry-header__link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>');
+			  the_title('<h3><a class="entry-header__link" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>');
 			}
 
 		if ('post' === get_post_type()) : ?>
@@ -27,7 +27,19 @@
 	</header><!-- .entry__header -->
 
 	<section class="entry__content">
-		<?php
+    <?php
+
+      if (empty($post->post_content)) {
+    ?>
+
+    <p>
+      <?php esc_html_e("This section is currently being developed, please check back soon and we'll have added new material.", 'school-self-evaluation'); ?>
+    </p>
+
+    <?php
+
+      }
+
 			the_content(
         sprintf(
 
@@ -40,10 +52,13 @@
 			  )
       );
 
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'school-self-evaluation' ),
 				'after'  => '</div>',
 			) );
+
+
 		?>
 
 	<footer class="entry__footer">
