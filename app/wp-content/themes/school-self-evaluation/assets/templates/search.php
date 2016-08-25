@@ -7,40 +7,58 @@
  * @package School_Self-Evaluation
  */
 
-get_header(); ?>
+get_header();
+?>
 
 	<section id="primary" class="content__article">
 
 		<?php
-		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'school-self-evaluation' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+		if (have_posts()) :
+
+      $search_results_count = $wp_query->found_posts;
+    ?>
+
+			<header class="search-meta__header">
+        <span class="search-meta__search-count">
+          <?php printf($search_results_count); ?>
+        </span>
+				<span class="search-meta">
+          <?php printf(esc_html__('search results for: %s', 'school-self-evaluation'), '<span class="search-meta__search-query">' . get_search_query() . '</span>'); ?>
+        </span>
+			</header>
+      <ul class="search-results__list">
 
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search');
+      // Starts the loop
+			while (have_posts()) : the_post();
 
-			endwhile;
+				// Run the loop for the search to output the results
+				get_template_part('template-parts/content', 'search');
+
+
+      endwhile;
+
+      ?>
+
+      <ul class="search-results__list">
+
+      <?php
 
 			the_posts_navigation();
 
 		else :
 
-			get_template_part( 'template-parts/content', 'none' );
+			get_template_part('template-parts/content', 'none');
 
-		endif; ?>
+		endif;
+    ?>
 
-	</section><!-- #primary -->
+  </section>
 
 <?php
+
 get_sidebar();
 get_footer();
+?>
