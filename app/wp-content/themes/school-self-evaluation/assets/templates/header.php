@@ -62,12 +62,7 @@
 
           wp_nav_menu(
             array(
-              container => 'nav',
-              container_class => 'header__nav',
-              items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
-              menu => 'navigation',
-              menu_class => 'header__nav__list',
-              menu_id => 'headerNavList'
+              menu => 'navigation'
             )
           );
         ?>

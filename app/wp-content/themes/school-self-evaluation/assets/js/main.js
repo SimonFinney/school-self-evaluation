@@ -9,7 +9,7 @@ import {
 
 const app = getElement('[data-app]');
 const styleButtons = getElements('[data-class]', app);
-const subnavigationLinks = getElements('.sub-menu a', app);
+const subnavigationLinks = getElements('.children a, .sub-menu a', app);
 
 let currentStyleClass;
 
