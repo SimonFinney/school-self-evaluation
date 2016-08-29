@@ -26,7 +26,7 @@ get_header();
       ?>
 
       <section class="content__article">
-        <h2>Recent updates</h2>
+        <h2>What's New</h2>
 
       <?php
 
