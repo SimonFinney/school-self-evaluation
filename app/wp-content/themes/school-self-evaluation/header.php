@@ -31,14 +31,18 @@
 
           <?php
 
-          wp_nav_menu(
-            array(
-              container_class => 'language-container',
-              menu => 'language',
-              menu_class => 'language-list',
-              menu_id => 'languageList'
-            )
-          );
+          if (has_nav_menu('language')) {
+
+            wp_nav_menu(
+              array(
+                container_class => 'language-container',
+                menu => 'language',
+                menu_class => 'language-list',
+                menu_id => 'languageList',
+                theme_location => 'language',
+              )
+            );
+          }
 
           get_search_form();
           ?>
@@ -60,6 +64,8 @@
 
         <?php
 
+        if (has_nav_menu('navigation')) {
+
           wp_nav_menu(
             array(
               container => 'nav',
@@ -67,9 +73,11 @@
               items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
               menu => 'navigation',
               menu_class => 'header__nav__list',
-              menu_id => 'headerNavList'
+              menu_id => 'headerNavList',
+              theme_location => 'navigation',
             )
           );
+        }
         ?>
       </section>
     </header>

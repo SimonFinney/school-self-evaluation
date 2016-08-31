@@ -46,7 +46,7 @@ function school_self_evaluation_setup() {
 	register_nav_menus(
     array(
 		    'navigation' => esc_html__('Navigation'),
-        'footer' => esc_html__('Footer')
+        'language' => esc_html__('Language')
 	  )
   );
 

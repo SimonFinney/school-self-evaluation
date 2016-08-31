@@ -19,18 +19,6 @@
           <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/image_inspectorate-logo.png">
           <span class="footer__tagline">Promoting the Quality of Learning</span>
         </section>
-        <?php
-          wp_nav_menu(
-            array(
-              container => 'nav',
-              container_class => 'footer__nav',
-              items_wrap => '<ul class="%2$s" role="navigation">%3$s</ul>',
-              menu => 'footer',
-              menu_class => 'footer__nav__list',
-              menu_id => 'footerNavList'
-            )
-          );
-        ?>
         <span class="footer__meta">An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
       </section>
     </footer>
