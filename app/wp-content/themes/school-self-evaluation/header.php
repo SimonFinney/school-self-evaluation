@@ -87,6 +87,7 @@
             )
           );
 
+          $current_blog_id = get_current_blog_id();
           $current_blog_description = get_bloginfo('description');
 
         ?>
@@ -102,7 +103,7 @@
 
         ?>
 
-          <a class="switch-blog__link" href="<?php echo get_site_url(); ?>"><?php echo $current_blog_description; ?></a> / <?php echo the_title(); ?>
+          <a class="switch-blog__link" href="<?php echo get_site_url() ?>"><?php echo $current_blog_description ?></a> / <?php echo the_title(); ?>
 
         <?php
 
