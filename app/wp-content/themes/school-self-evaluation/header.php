@@ -103,9 +103,12 @@
 
         ?>
 
-          <a class="switch-blog__link" href="<?php echo get_site_url() ?>"><?php echo $current_blog_description ?></a> / <?php echo the_title(); ?>
-
+          <a class="switch-blog__link" href="<?php echo get_site_url() ?>"><?php echo $current_blog_description ?></a>
         <?php
+
+            if (!is_front_page('home')) {
+              echo the_title();
+            }
 
             restore_current_blog();
           }
