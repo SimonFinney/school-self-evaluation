@@ -7,7 +7,8 @@
  * @package School_Self-Evaluation
  */
 
- if (is_front_page()) {
+ // Displays the Twitter feed only if it's the landing or contact section
+ if (is_front_page() || is_page('contact')) {
 ?>
 
 <aside class="aside" role="complementary">

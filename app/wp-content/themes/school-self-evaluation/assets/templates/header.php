@@ -78,14 +78,17 @@
 
         <?php
 
-        $blog_list = wp_get_sites(
-          array(
-            limit => 1
-          )
-        );
+        // Don't display this on the landing layout
+        if (!is_page('home')) {
 
-        $current_blog_id = get_current_blog_id();
-        $current_blog_description = get_bloginfo('description');
+          $blog_list = wp_get_sites(
+            array(
+              limit => 1
+            )
+          );
+
+          $current_blog_id = get_current_blog_id();
+          $current_blog_description = get_bloginfo('description');
 
         ?>
 
@@ -95,18 +98,20 @@
         <?php
 
 
-        foreach ($blog_list as $blog) {
-          switch_to_blog($blog['blog_id']);
+          foreach ($blog_list as $blog) {
+            switch_to_blog($blog['blog_id']);
 
-          ?>
+        ?>
 
           <a class="switch-blog__link" href="<?php echo get_site_url() ?>"><?php echo $current_blog_description ?></a> / <?php echo the_title(); ?>
 
-          <?php
+        <?php
 
-          restore_current_blog();
-         }
+            restore_current_blog();
+          }
 
         ?>
 
         </nav>
+
+  <?php } ?>
