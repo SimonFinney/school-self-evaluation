@@ -37,3 +37,8 @@
   margin-left: auto;
   align-items: center;
 }
+
+.content__blog-navigation {
+  @extend %container;
+  width: 100%;
+}
