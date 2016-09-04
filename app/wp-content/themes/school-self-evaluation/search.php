@@ -42,11 +42,9 @@ get_header();
 
       ?>
 
-      <ul class="search-results__list">
+      </ul>
 
       <?php
-
-			the_posts_navigation();
 
 		else :
 
