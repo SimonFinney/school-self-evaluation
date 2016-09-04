@@ -23,7 +23,9 @@
       ?>
   	</header>
 
-  	<?php the_excerpt(); ?>
+    <p>
+      <?php school_self_evaluation_search_excerpt_highlight(); ?>
+    </p>
 
   	<footer class="search-result__footer">
   	  <?php school_self_evaluation_entry_footer(); ?>

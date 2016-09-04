@@ -4,6 +4,7 @@
   @extend %color--light;
 
   position: relative;
+  min-height: $header-min-height;
   padding-top: 16px;
   padding-right: 8px;
   padding-left: 8px;

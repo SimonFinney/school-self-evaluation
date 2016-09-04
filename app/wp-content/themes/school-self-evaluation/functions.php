@@ -96,6 +96,16 @@ function school_self_evaluation_widgets_init() {
 }
 add_action( 'widgets_init', 'school_self_evaluation_widgets_init' );
 
+
+function school_self_evaluation_search_excerpt_highlight() {
+  $the_excerpt = get_the_excerpt();
+  $search_query = implode('|', explode(' ', get_search_query()));
+  $the_excerpt = preg_replace('/(' . $search_query . ')/iu', '<strong>\0</strong>', $the_excerpt);
+
+  echo $the_excerpt;
+}
+
+
 /**
  * Enqueue scripts and styles.
  */
