@@ -43,8 +43,19 @@ get_header();
       ?>
 
       </ul>
+      
+      <nav class="search-results__nav">
 
       <?php
+
+			   previous_posts_link();
+         next_posts_link();
+
+      ?>
+
+      </nav>
+
+    <?php
 
 		else :
 

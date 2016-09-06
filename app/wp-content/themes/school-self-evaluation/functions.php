@@ -97,6 +97,11 @@ function school_self_evaluation_widgets_init() {
 add_action( 'widgets_init', 'school_self_evaluation_widgets_init' );
 
 
+function school_self_evaluation_posts_link_attributes() {
+  return 'class="search-results__nav__link--next"';
+}
+
+
 function school_self_evaluation_search_excerpt_highlight() {
   $the_excerpt = get_the_excerpt();
   $search_query = implode('|', explode(' ', get_search_query()));
@@ -112,10 +117,6 @@ function school_self_evaluation_search_excerpt_highlight() {
 function school_self_evaluation_scripts() {
 	wp_enqueue_style( 'school-self-evaluation-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'school-self-evaluation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'school-self-evaluation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
   wp_enqueue_script( 'school-self-evaluation-main', get_template_directory_uri() . '/dist/js/bundle.js', array(), '20151215', true );
 
   wp_enqueue_script( 'school-self-evaluation-twitter-widget', 'https://platform.twitter.com/widgets.js', array(), '20151215', true);
@@ -123,8 +124,14 @@ function school_self_evaluation_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+  wp_deregister_script('jquery');
 }
+
+
 add_action( 'wp_enqueue_scripts', 'school_self_evaluation_scripts' );
+
+add_filter('next_posts_link_attributes', 'school_self_evaluation_posts_link_attributes');
 
 /**
  * Custom template tags for this theme.
