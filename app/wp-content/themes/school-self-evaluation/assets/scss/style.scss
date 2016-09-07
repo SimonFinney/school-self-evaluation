@@ -5,7 +5,7 @@
   Theme URI: https://github.com/SimonFinney/school-self-evaluation
   Author: Simon Finney
   Author URI: https://github.com/SimonFinney
-  Description: #
+  Description: School Self-Evaluation WordPress theme
   Version: 1.0.0
   License: MIT
   License URI: #
@@ -21,17 +21,14 @@
 /*-------------------
 >>> Table of Contents
 ---------------------
-1.0 Imports
-2.0 Typography
-3.0 Layout
-4.0 Elements
-5.0 Navigation
-6.0 Components
+1.0 Typography
+2.0 Layout
+3.0 Elements
+4.0 Navigation
+5.0 Components
 --------------------*/
 
-/*----- 1.0 Imports -----*/
-
-/*----- 2.0 Typography -----*/
+/*----- 1.0 Typography -----*/
 @import
 'utils/typography',
 'elements/h1',
@@ -40,10 +37,10 @@
 'elements/h4';
 
 
-/*----- 3.0 Layout -----*/
+/*----- 2.0 Layout -----*/
 @import 'layout/layout';
 
-/*----- 4.0 Elements -----*/
+/*----- 3.0 Elements -----*/
 @import
 'elements/a',
 'elements/article',
@@ -61,12 +58,12 @@
 'elements/textarea',
 'elements/ul';
 
-/*----- 5.0 Navigation -----*/
+/*----- 4.0 Navigation -----*/
 @import
 'components/navigation',
 'components/search-form';
 
-/*----- 6.0 Components -----*/
+/*----- 5.0 Components -----*/
 @import
 'components/high-contrast',
 'components/layout-list',

@@ -114,9 +114,8 @@
           <a class="switch-blog__link" href="<?php echo get_site_url() ?>"><?php echo $current_blog_description ?></a>
         <?php
 
-            if (!is_front_page('home')) {
-              echo the_title();
-            }
+            $breadcrumb_title = (is_search() || is_front_page('home')) ? '' : get_the_title();
+            echo $breadcrumb_title;
 
             restore_current_blog();
           }

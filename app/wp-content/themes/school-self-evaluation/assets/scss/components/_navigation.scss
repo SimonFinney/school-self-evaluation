@@ -5,57 +5,86 @@
   background: $lightest;
 }
 
+%header__nav__menu-item {
+
+  &.current-menu-item,
+  &.current-menu-parent {
+
+    > a {
+      @extend %menu-item--active;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 6px;
+    background: linear-gradient($header-gradient-end 0, $brand-primary-dark 100%);
+    border-top: 1px solid $brand-primary-dark;
+    border-right: 1px solid $brand-primary-dark;
+    border-left: 1px solid $brand-primary-dark;
+    outline: 0;
+    transition: .1s;
+
+    &:focus,
+    &:hover {
+      @extend %menu-item--active;
+      text-decoration: none;
+
+      + .sub-menu {
+        visibility: visible;
+      }
+    }
+
+    + .sub-menu {
+
+      &[data-active] {
+        visibility: visible;
+      }
+    }
+  }
+
+  &:hover {
+
+    > a {
+      @extend %menu-item--active;
+    }
+
+    > .sub-menu {
+      visibility: visible;
+    }
+  }
+}
+
+%header__nav__sub-menu__item {
+  width: 100%;
+  white-space: nowrap;
+
+  a {
+    padding: 8px;
+    color: $brand-primary-dark;
+    background: $lightest;
+    border: 0;
+    outline: 0;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.current-menu-item {
+
+    a {
+      color: $brand-secondary;
+    }
+  }
+}
+
 .header__nav__list {
   @extend %reset--ul;
 
   .menu-item {
-
-    &.current-menu-item,
-    &.current-menu-parent {
-
-      > a {
-        @extend %menu-item--active;
-      }
-    }
-
-    a {
-      display: block;
-      padding: 6px;
-      background: linear-gradient($header-gradient-end 0, $brand-primary-dark 100%);
-      border-top: 1px solid $brand-primary-dark;
-      border-right: 1px solid $brand-primary-dark;
-      border-left: 1px solid $brand-primary-dark;
-      outline: 0;
-      transition: .1s;
-
-      &:focus,
-      &:hover {
-        @extend %menu-item--active;
-        text-decoration: none;
-
-        + .sub-menu {
-          visibility: visible;
-        }
-      }
-
-      + .sub-menu {
-
-        &[data-active] {
-          visibility: visible;
-        }
-      }
-    }
-
-    &:hover {
-
-      > a {
-        @extend %menu-item--active;
-      }
-
-      > .sub-menu {
-        visibility: visible;
-      }
-    }
+    @extend %header__nav__menu-item;
   }
 }
 
@@ -72,27 +101,6 @@
   visibility: hidden;
 
   .menu-item {
-    width: 100%;
-    white-space: nowrap;
-
-    a {
-      padding: 8px;
-      color: $brand-primary-dark;
-      background: $lightest;
-      border: 0;
-      outline: 0;
-
-      &:focus,
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    &.current-menu-item {
-
-      a {
-        color: $brand-secondary;
-      }
-    }
+    @extend %header__nav__sub-menu__item;
   }
 }
