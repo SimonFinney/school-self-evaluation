@@ -134,7 +134,6 @@ function school_self_evaluation_mce_buttons($buttons) {
   return $buttons;
 }
 
-add_filter('mce_external_plugins', 'school_self_evaluation_register_tinymce_javascript');
 
 function school_self_evaluation_register_tinymce_javascript($plugin_array) {
   $plugin_array['SchoolSelfEvaluation'] = get_template_directory_uri() . '/js/tinymce-plugin.js';
@@ -142,9 +141,11 @@ function school_self_evaluation_register_tinymce_javascript($plugin_array) {
 }
 
 
+add_action('wp_enqueue_scripts', 'school_self_evaluation_scripts');
+
 add_filter('mce_buttons_2', 'school_self_evaluation_mce_buttons');
 
-add_action( 'wp_enqueue_scripts', 'school_self_evaluation_scripts' );
+add_filter('mce_external_plugins', 'school_self_evaluation_register_tinymce_javascript');
 
 add_filter('next_posts_link_attributes', 'school_self_evaluation_posts_link_attributes');
 
