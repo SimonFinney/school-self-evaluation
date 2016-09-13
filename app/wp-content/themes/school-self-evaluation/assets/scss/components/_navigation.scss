@@ -92,6 +92,14 @@
   position: relative;
   display: inline;
   float: left;
+  width: 100%;
+}
+
+@include media-query('medium') {
+
+  .menu-item {
+    width: auto;
+  }
 }
 
 .sub-menu {

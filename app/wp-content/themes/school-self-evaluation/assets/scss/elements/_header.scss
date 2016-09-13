@@ -25,10 +25,13 @@
 
 .header__user-controls {
   display: flex;
-  height: 0;
-  margin-top: 8px;
+  margin-bottom: auto;
   margin-left: auto;
   align-items: center;
+}
+
+.header__nav {
+  margin-top: 8px;
 }
 
 .content__blog-navigation {
