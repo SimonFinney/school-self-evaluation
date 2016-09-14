@@ -1,5 +1,16 @@
 // Navigation
 
+%menu__item {
+  width: 100%;
+}
+
+@include media-query('medium') {
+
+  %menu__item {
+    width: auto;
+  }
+}
+
 %menu-item--active {
   color: $brand-primary-dark;
   background: $lightest;
@@ -89,21 +100,16 @@
 }
 
 .menu-item {
+  @extend %menu__item;
   position: relative;
   display: inline;
   float: left;
-  width: 100%;
-}
-
-@include media-query('medium') {
-
-  .menu-item {
-    width: auto;
-  }
 }
 
 .sub-menu {
+  @extend %menu__item;
   @extend %reset--ul;
+  @include z-index('sub-menu');
   position: absolute;
   border: 1px solid $brand-primary-dark;
   visibility: hidden;

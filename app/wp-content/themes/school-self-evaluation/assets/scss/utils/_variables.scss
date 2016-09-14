@@ -42,3 +42,8 @@ $desired-font-size: 16;
 // Element minimum heights
 $header-min-height: 104px;
 $footer-min-height: 186px;
+
+// Element ordering for z-indexes
+$z-index-order: (
+  sub-menu
+);

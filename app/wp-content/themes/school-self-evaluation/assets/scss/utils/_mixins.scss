@@ -28,3 +28,9 @@
   #{$property}: (($value * $desired-font-size) / $divider) + px;
   #{$property}:  ($value / $divider) + rem;
 }
+
+
+// Returns z-index order for the element passed in
+@mixin z-index($element) {
+  z-index: index($z-index-order, $element);
+}
