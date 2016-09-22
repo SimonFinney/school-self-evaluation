@@ -123,10 +123,11 @@
   }
 
   .content__subnavigation {
+    background-color: transparent;
+    border: 1px solid $lightest;
 
     a {
-      background-color: transparent;
-      border: 1px solid $lightest;
+      background-color: inherit;
     }
   }
 }
