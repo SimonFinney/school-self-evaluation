@@ -1,0 +1,11 @@
+// HTML
+
+html {
+  height: 100%;
+  font-family: $font-family;
+  font-size: $font-size;
+
+  &.large-text-size {
+    font-size: ($font-size * 1.14285714285714); // 16px / 14px
+  }
+}

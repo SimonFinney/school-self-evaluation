@@ -1,0 +1,34 @@
+// Footer
+
+.footer {
+  @extend %color--light;
+  @extend %container;
+  min-height: $footer-min-height;
+  background-color: $background-darkest;
+  box-sizing: border-box;
+}
+
+.footer__content {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.footer__inspectorate-meta {
+  display: flex;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__tagline {
+  margin-top: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  flex-basis: 100%;
+}
+
+.footer__meta {
+  @extend %container-width;
+  display: inline-block;
+  text-align: right;
+}

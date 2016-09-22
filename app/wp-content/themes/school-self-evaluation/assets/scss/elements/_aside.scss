@@ -1,0 +1,12 @@
+// Aside
+
+.aside {
+  @extend %container-width;
+}
+
+@include media-query('medium') {
+
+  .aside {
+    width: 33%;
+  }
+}
