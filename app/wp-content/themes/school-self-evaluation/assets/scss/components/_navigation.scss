@@ -120,17 +120,13 @@
 }
 
 .content__subnavigation {
-  padding: 8px;
+  padding: 8px 8px 0;
   overflow: auto;
   list-style: none;
   background-color: $background;
 
   li {
     margin-bottom: 8px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 
   a {
@@ -148,11 +144,6 @@
       display: inline;
       float: left;
       margin-right: 8px;
-      margin-bottom: 0;
-
-      &:last-of-type {
-        margin-right: 0;
-      }
     }
   }
 }
