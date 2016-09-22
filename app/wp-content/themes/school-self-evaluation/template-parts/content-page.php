@@ -35,7 +35,9 @@
 
   <?php
 
-    if (empty($post->post_content)) {
+    $child_pages = get_pages(array('child_of' => $post->ID));
+
+    if (empty($post->post_content) && (count($child_pages) === 0)) {
   ?>
 
   <p>
