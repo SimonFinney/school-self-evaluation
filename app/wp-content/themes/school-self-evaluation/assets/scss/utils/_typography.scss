@@ -1,8 +1,0 @@
-// Typography
-
-%type--body {
-  $font-size: .875; // 14px / 16px
-  $line-height: 1.313; // 21px / 16px
-
-  @include calculate-type($font-size, $line-height);
-}
