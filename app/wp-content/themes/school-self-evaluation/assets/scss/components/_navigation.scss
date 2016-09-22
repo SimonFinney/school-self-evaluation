@@ -126,12 +126,10 @@
   background-color: $background;
 
   li {
-    display: inline;
-    float: left;
-    margin-right: 8px;
+    margin-bottom: 8px;
 
     &:last-of-type {
-      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -139,5 +137,22 @@
     display: block;
     padding: 6px;
     background-color: $brand-primary-light;
+  }
+}
+
+@include media-query('medium') {
+
+  .content__subnavigation {
+
+    li {
+      display: inline;
+      float: left;
+      margin-right: 8px;
+      margin-bottom: 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 }
