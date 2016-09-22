@@ -1,0 +1,16 @@
+// Link
+
+a {
+  font-weight: bold;
+  color: $brand-primary;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline-width: 0;
+  }
+}

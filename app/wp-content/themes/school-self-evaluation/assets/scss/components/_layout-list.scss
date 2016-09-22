@@ -1,0 +1,80 @@
+// Layout list
+
+.language-list {
+  @extend %reset--ul;
+}
+
+.layout-list {
+  @extend %reset--ul;
+  display: flex;
+}
+
+.layout-list__item {
+  display: flex;
+  margin-left: 8px;
+}
+
+.layout-list__button {
+  @extend %button--touch;
+  position: relative;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-indent: -9999px;
+  content: 'A';
+
+  &::before {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    display: inline-block;
+    width: 8px;
+    height: 1px;
+    background-color: transparent;
+    content: '';
+    transform: translateX(-50%);
+    transition: .3s;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    text-indent: 0;
+    content: 'A';
+    transform: translate(-50%, -50%);
+  }
+
+  &:focus,
+  &:hover {
+
+    &::before {
+      background-color: currentColor;
+    }
+  }
+
+  &[data-class=''],
+  &[data-class='large-text-size'] {
+    background-color: $brand-primary-light;
+  }
+
+  &[data-class='large-text-size'],
+  &[data-class='high-contrast'] {
+    @extend %type--body;
+  }
+
+  &[data-class='high-contrast'] {
+    color: $high-contrast-body;
+    background-color: $high-contrast-background;
+  }
+}
+
+@include media-query('medium') {
+
+  .layout-list__button {
+
+    &::before {
+      bottom: 4px;
+    }
+  }
+}

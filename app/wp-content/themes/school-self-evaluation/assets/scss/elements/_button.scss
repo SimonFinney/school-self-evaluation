@@ -1,0 +1,68 @@
+// Button
+
+%button {
+  @extend %type--body;
+  padding: 8px 24px;
+  font-family: $font-family;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0;
+  transition: .1s;
+}
+
+%button--active {
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $brand-primary;
+  }
+}
+
+%button--primary {
+  @extend %button;
+  @extend %button--active;
+  @extend %type--body;
+  color: $lightest;
+  cursor: pointer;
+  background-color: $brand-primary-dark;
+}
+
+%button__secondary--active {
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $lightest;
+  }
+}
+
+%button--secondary {
+  @extend %button;
+  @extend %button--active;
+  @extend %button__secondary--active;
+  color: $darkest;
+  background-color: transparent;
+  outline: 1px solid $brand-primary;
+}
+
+.form {
+
+  input {
+
+    &[type='reset'],
+    &[type='submit'] {
+      float: right;
+    }
+
+    &[type='reset'] {
+      @extend %button--secondary;
+    }
+
+    &[type='submit'] {
+      @extend %button--primary;
+      margin-left: 16px;
+      outline: 0;
+    }
+  }
+}

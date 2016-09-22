@@ -1,0 +1,144 @@
+// High contrast
+
+%high-contrast__nav__menu-item {
+
+  &.current-menu-item {
+
+    > a {
+      background-color: $high-contrast-a-hover;
+    }
+  }
+
+  a {
+    color: $high-contrast-background;
+    background: $high-contrast-a;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+      background-color: $high-contrast-a-hover;
+    }
+  }
+}
+
+.high-contrast {
+
+  %button--primary,
+  %button--secondary {
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      background-color: $high-contrast-a-hover;
+    }
+  }
+
+  %button--primary {
+    color: $high-contrast-background;
+    background-color: $high-contrast-a;
+
+    &:focus,
+    &:hover {
+      color: $high-contrast-background;
+    }
+  }
+
+  %button--secondary {
+    color: $high-contrast-a;
+    background-color: transparent;
+    outline-color: $high-contrast-a;
+
+    &:focus,
+    &:hover {
+      color: $high-contrast-background;
+      outline-color: $high-contrast-a-hover;
+    }
+  }
+
+  body,
+  .footer,
+  h1,
+  h2,
+  h3,
+  p {
+    color: $high-contrast-body;
+  }
+
+  body {
+    background-color: $high-contrast-background;
+  }
+
+  .header {
+    background: transparent;
+    border-bottom: 1px solid $lightest;
+    box-shadow: none;
+  }
+
+  .header__nav__list {
+
+    .menu-item {
+      @extend %high-contrast__nav__menu-item;
+    }
+  }
+
+  .layout-list__button {
+
+    &[data-class=''],
+    &[data-class='large-text-size'] {
+      background-color: $lightest;
+    }
+
+    &[data-class='high-contrast'] {
+      border: 1px solid $lightest;
+    }
+  }
+
+  .main,
+  .footer,
+  .search-results__list-item {
+    background-color: transparent;
+  }
+
+  .section {
+    border-top-color: $lightest;
+  }
+
+  .footer {
+    border-top: 1px solid $lightest;
+  }
+
+  a {
+    color: $high-contrast-a;
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      color: $high-contrast-a-hover;
+    }
+  }
+
+  .search-results__list-item {
+    border: 1px solid $lightest;
+  }
+
+  .content__subnavigation {
+
+    a {
+      background-color: transparent;
+      border: 1px solid $lightest;
+    }
+  }
+}
+
+@include media-query('medium') {
+
+  .high-contrast {
+
+    .content__article {
+
+      + .aside {
+        border-left: 1px solid $lightest;
+      }
+    }
+  }
+}
