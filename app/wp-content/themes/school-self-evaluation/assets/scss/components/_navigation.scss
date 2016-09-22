@@ -127,7 +127,7 @@
   li {
     display: inline;
     float: left;
-    margin-right: 8px;
+    margin-right: 2px;
 
     &:last-of-type {
       margin-right: 0;
@@ -138,6 +138,6 @@
     display: block;
     padding: 6px;
     color: $lightest;
-    background-color: $brand-primary;
+    background-color: $brand-primary-light;
   }
 }

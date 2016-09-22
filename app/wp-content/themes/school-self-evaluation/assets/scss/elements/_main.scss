@@ -1,9 +1,0 @@
-// Main
-
-.main {
-  @extend %container;
-  min-height: calc(100% - (#{$header-min-height} + #{$footer-min-height}));
-  padding-bottom: 64px;
-  background-color: $lightest;
-  box-sizing: border-box;
-}
