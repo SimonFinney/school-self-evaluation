@@ -118,3 +118,26 @@
     @extend %header__nav__sub-menu__item;
   }
 }
+
+.content__subnavigation {
+  padding-left: 0;
+  overflow: auto;
+  list-style: none;
+
+  li {
+    display: inline;
+    float: left;
+    margin-right: 8px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 6px;
+    color: $lightest;
+    background-color: $brand-primary;
+  }
+}

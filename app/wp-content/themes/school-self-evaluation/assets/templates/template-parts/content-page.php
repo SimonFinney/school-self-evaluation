@@ -21,7 +21,7 @@
     ?>
 
     <nav class="entry-header__nav">
-      <ul>
+      <ul class="content__subnavigation">
           <?php echo $child_pages; ?>
       </ul>
     </nav>
