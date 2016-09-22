@@ -1,0 +1,21 @@
+# Hidden folders
+.*/
+
+# Package folders
+bower_components
+node_modules
+
+# Output folders
+dist
+
+# Always-ignore files
+*.log
+
+# Individual folders and files
+**/.DS_Store
+app/**
+data
+logs
+
+# Folders and files not to ignore
+!app/wp-content/themes/school-self-evaluation
