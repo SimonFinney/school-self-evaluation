@@ -2,7 +2,6 @@
 .*/
 
 # Package folders
-bower_components
 node_modules
 
 # Output folders
@@ -16,7 +15,6 @@ dist
 app/*
 app/wp-content/*
 app/wp-content/themes/*
-data
 logs
 
 # Folders and files not to ignore
