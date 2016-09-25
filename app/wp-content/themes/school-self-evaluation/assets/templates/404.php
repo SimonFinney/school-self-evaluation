@@ -15,7 +15,7 @@
    <p><?php esc_html_e('It looks like that content can&rsquo;t be found in this location... Maybe try one of the links below or a search above?', 'school-self-evaluation'); ?></p>
 
    <?php
-   the_widget('WP_Widget_Recent_Posts', 'title=Latest News', 'before_title=<h3>&after_title=</h3>');
+   the_widget('WP_Widget_Recent_Posts', "title=What's New", 'before_title=<h3>&after_title=</h3>');
    ?>
  </section>
 

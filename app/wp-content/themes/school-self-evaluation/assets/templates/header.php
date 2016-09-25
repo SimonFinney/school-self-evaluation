@@ -87,7 +87,7 @@
         <?php
 
         // Don't display this on the landing layout
-        if (!is_page('home')) {
+        if (is_multisite() && !is_page('home')) {
 
           $blog_list = wp_get_sites(
             array(
