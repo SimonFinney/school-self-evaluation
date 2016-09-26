@@ -130,6 +130,7 @@ function school_self_evaluation_scripts() {
 
 
 function school_self_evaluation_mce_buttons($buttons) {
+  array_unshift($buttons, 'embed');
   array_unshift($buttons, 'section');
   return $buttons;
 }

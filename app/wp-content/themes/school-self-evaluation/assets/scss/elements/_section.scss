@@ -62,4 +62,15 @@
       margin-right: 0;
     }
   }
+
+  .section--embed {
+    overflow: auto;
+
+    > * {
+      float: left;
+      max-width: calc(50% - 24px);
+      margin-right: 24px;
+      content: '';
+    }
+  }
 }
