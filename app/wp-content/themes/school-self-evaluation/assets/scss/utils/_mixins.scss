@@ -1,5 +1,25 @@
 // Mixins
 
+// Calculates layout columns
+@mixin calculate-columns($selector-string, $total-columns, $margin) {
+  $selector: unquote($selector-string);
+
+  @for $column-index from 1 through $total-columns {
+    $percentage: ((100 / $column-index) + %);
+    $width: if($margin, calc(#{$percentage} - #{$margin}), $percentage);
+
+    #{$selector} {
+
+      &:first-of-type {
+
+        &:nth-last-of-type(#{$column-index}),
+        &:nth-last-of-type(#{$column-index}) ~ #{$selector} {
+          width: $width;
+        }
+      }
+    }
+  }
+}
 
 // Calculates font size and line height
 @mixin calculate-type($font-size, $line-height: $font-size) {
