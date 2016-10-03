@@ -16,7 +16,7 @@
 
     the_title('<h2>', '</h2>');
 
-    $child_pages  = wp_list_pages('title_li=&child_of=' .$post->ID . '&depth=1&echo=0');
+    $child_pages  = wp_list_pages('title_li=&child_of=' .$post->ID . '&echo=0');
     if ($child_pages) :
     ?>
 
