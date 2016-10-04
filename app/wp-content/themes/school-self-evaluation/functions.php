@@ -160,6 +160,15 @@ function school_self_evaluation_tinymce_buttons($buttons) {
     return array_diff($buttons, $buttons_to_remove);
 }
 
+
+function school_self_evaluation_custom_menu_page_removing() {
+  remove_menu_page('edit-comments.php');
+  remove_menu_page('link-manager.php');
+}
+
+
+add_action('admin_menu', 'school_self_evaluation_custom_menu_page_removing');
+
 add_action('wp_enqueue_scripts', 'school_self_evaluation_scripts');
 
 add_filter('mce_buttons', 'school_self_evaluation_tinymce_buttons');

@@ -1,25 +1,27 @@
 (function() {
 
-  function createCommand(textEditor, cmd, title, tagName, className) {
-    var text = (cmd[0].toUpperCase() + cmd.substring(1));
+  function createCommand(textEditor, text, title, tagName, className) {
+    var cmd = text.toLowerCase();
 
     textEditor.addButton(cmd, {
-      cmd: cmd,
       text: text,
       title: title,
-    });
+      onclick: function() {
+        var selection = textEditor.selection.getContent();
 
-    textEditor.addCommand(cmd, function() {
-      textEditor.selection
-        .setContent('<' + tagName + ' class="' + className + '">' + textEditor.selection.getContent() + '</' + tagName + '>');
+        if (selection && selection.length) {
+          textEditor.selection
+            .setContent('<' + tagName + ' class="' + className + '">' + selection + '</' + tagName + '>');
+        }
+      },
     });
   }
 
 
   tinymce.create('tinymce.plugins.SchoolSelfEvaluation', {
     init: function(textEditor) {
-      createCommand(textEditor, 'section', 'Add section formatting', 'section', 'section');
-      createCommand(textEditor, 'embed', 'Add embed formatting', 'section', 'section--embed');
+      createCommand(textEditor, 'Section', 'Add section formatting', 'section', 'section');
+      createCommand(textEditor, 'Embed', 'Add embed formatting', 'section', 'section--embed');
     },
   });
 
