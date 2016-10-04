@@ -142,7 +142,29 @@ function school_self_evaluation_register_tinymce_javascript($plugin_array) {
 }
 
 
+// Remove visual editor buttons
+function school_self_evaluation_tinymce_buttons($buttons) {
+    $buttons_to_remove = array(
+      'aligncenter',
+      'alignjustify',
+      'alignleft',
+      'alignright',
+      'blockquote',
+      'forecolor',
+      'hr',
+      'indent',
+      'outdent',
+      'strikethrough'
+    );
+
+    return array_diff($buttons, $buttons_to_remove);
+}
+
 add_action('wp_enqueue_scripts', 'school_self_evaluation_scripts');
+
+add_filter('mce_buttons', 'school_self_evaluation_tinymce_buttons');
+
+add_filter('mce_buttons_2', 'school_self_evaluation_tinymce_buttons');
 
 add_filter('mce_buttons_2', 'school_self_evaluation_mce_buttons');
 

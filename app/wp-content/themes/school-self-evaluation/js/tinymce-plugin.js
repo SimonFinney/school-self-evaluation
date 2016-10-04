@@ -1,12 +1,15 @@
 (function() {
 
-  function createCommand(textEditor, command, title, tagName, className) {
-    textEditor.addButton(command, {
-      cmd: command,
+  function createCommand(textEditor, cmd, title, tagName, className) {
+    var text = (cmd[0].toUpperCase() + cmd.substring(1));
+
+    textEditor.addButton(cmd, {
+      cmd: cmd,
+      text: text,
       title: title,
     });
 
-    textEditor.addCommand(command, function() {
+    textEditor.addCommand(cmd, function() {
       textEditor.selection
         .setContent('<' + tagName + ' class="' + className + '">' + textEditor.selection.getContent() + '</' + tagName + '>');
     });
