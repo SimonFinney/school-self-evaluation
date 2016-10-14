@@ -37,14 +37,9 @@
 
 .header__social-media {
   display: flex;
-}
 
-.social-media__list-item {
-  float: left;
-  margin-right: 16px;
-
-  &:last-of-type {
-    margin-right: 0;
+  .social-media__list-item {
+    margin-left: 16px;
   }
 }
 

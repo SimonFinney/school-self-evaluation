@@ -29,15 +29,6 @@
 
         <section class="header__user-controls">
 
-          <ul class="header__social-media">
-            <li class="social-media__list-item">
-              <a class="social-media__link--facebook" href="https://www.facebook.com/DESInspectorate/" target="_blank">Facebook</a>
-            </li>
-            <li class="social-media__list-item">
-              <a class="social-media__link--twitter" href="https://twitter.com/SSEinspectorate" target="_blank">Twitter</a>
-            </li>
-          </ul>
-
           <?php
 
           if (has_nav_menu('language')) {
@@ -52,6 +43,18 @@
               )
             );
           }
+          ?>
+
+          <ul class="header__social-media">
+            <li class="social-media__list-item">
+              <a class="social-media__link--facebook" href="https://www.facebook.com/DESInspectorate/" target="_blank">Facebook</a>
+            </li>
+            <li class="social-media__list-item">
+              <a class="social-media__link--twitter" href="https://twitter.com/SSEinspectorate" target="_blank">Twitter</a>
+            </li>
+          </ul>
+
+          <?php
 
           get_search_form();
           ?>

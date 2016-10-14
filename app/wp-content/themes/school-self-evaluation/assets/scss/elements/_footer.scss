@@ -31,3 +31,15 @@
   float: right;
   text-align: right;
 }
+
+.footer__social-media {
+
+  .social-media__list-item {
+    float: left;
+    margin-right: 16px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
