@@ -28,7 +28,6 @@
 }
 
 .footer__meta {
-  @extend %container-width;
-  display: inline-block;
+  float: right;
   text-align: right;
 }

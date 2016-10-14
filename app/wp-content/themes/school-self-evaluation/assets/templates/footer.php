@@ -20,6 +20,14 @@
           <span class="footer__tagline">Promoting the Quality of Learning</span>
         </section>
         <span class="footer__meta">An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
+        <ul class="footer__social-media">
+          <li class="social-media__list-item">
+            <a class="social-media__link--facebook" href="https://www.facebook.com/DESInspectorate/" target="_blank">Facebook</a>
+          </li>
+          <li class="social-media__list-item">
+            <a class="social-media__link--twitter" href="https://twitter.com/SSEinspectorate" target="_blank">Twitter</a>
+          </li>
+        </ul>
       </section>
     </footer>
     <?php wp_footer(); ?>
