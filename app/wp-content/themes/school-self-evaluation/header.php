@@ -129,7 +129,7 @@
             restore_current_blog();
           }
 
-          $breadcrumb_title = (is_search() || is_page('home')) ? '' : get_the_title();
+          $breadcrumb_title = (is_search() || is_home() || is_page('home')) ? '' : get_the_title();
           echo $breadcrumb_title;
 
         ?>
