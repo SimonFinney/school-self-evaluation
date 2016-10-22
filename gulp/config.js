@@ -2,6 +2,9 @@
 
 'use strict';
 
+const util = require('gulp-util');
+const ftpCredentials = require('../FTP_CREDENTIALS.json');
+
 // Paths
 const imageExtensions = [
   'gif',
@@ -42,24 +45,33 @@ const browsers = [
   'Android > 0',
 ];
 
-const autoprefixerConfig = { browsers: browsers };
+const autoprefixer = { browsers };
 
-const browserSyncConfig = {
+const browserSync = {
   notify: false,
   proxy: 'http://192.168.99.100:8080',
 };
 
-const htmlminConfig = {
+const htmlmin = {
   collapseWhitespace: true,
   removeComments: true,
 };
 
-const imageminConfig = {
+const imagemin = {
   interlaced: true,
   progressive: true,
 };
 
-const webpackConfig = {
+const vinylFtp = {
+  host: ftpCredentials.host,
+  user: ftpCredentials.user,
+  maxConnections: 8,
+  password: ftpCredentials.password,
+  path: ftpCredentials.path,
+  log: util.log,
+};
+
+const webpack = {
   devtool: 'source-map',
   output: {
     filename: 'bundle.js',
@@ -78,12 +90,12 @@ const webpackConfig = {
   }
 };
 
-
 module.exports = {
-  paths: paths,
-  autoprefixer: autoprefixerConfig,
-  browserSync: browserSyncConfig,
-  htmlmin: htmlminConfig,
-  imagemin: imageminConfig,
-  webpack: webpackConfig,
+  paths,
+  autoprefixer,
+  browserSync,
+  htmlmin,
+  imagemin,
+  vinylFtp,
+  webpack,
 };

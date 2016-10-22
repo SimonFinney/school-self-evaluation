@@ -16,6 +16,9 @@ require('./gulp/tasks/build')(gulp, runSequence);
 // Clean
 require('./gulp/tasks/clean')(gulp, config.paths);
 
+// Deploy
+require('./gulp/tasks/deploy')(gulp, config);
+
 // ESLint
 require('./gulp/tasks/eslint')(gulp, config.paths.js);
 

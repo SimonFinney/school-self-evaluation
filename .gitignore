@@ -16,6 +16,7 @@ app/*
 app/wp-content/*
 app/wp-content/themes/*
 logs
+FTP_CREDENTIALS.json
 
 # Folders and files not to ignore
 !app/wp-content
