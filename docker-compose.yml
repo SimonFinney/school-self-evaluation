@@ -27,6 +27,5 @@ services:
       - 8080:80
     volumes:
       - ./app/:/var/www/html
-      - ./httpd.conf:/etc/httpd/conf/httpd.conf
 
 version: '2'

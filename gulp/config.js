@@ -17,13 +17,7 @@ const paths = new (function() {
   this.basePath = 'app/wp-content/themes/school-self-evaluation/';
   this.app = `${this.basePath}assets/`;
   this.distDir = `${this.basePath}dist/`;;
-
-  this.extras = {
-    favicon: '*.ico',
-    fonts: 'fonts/**',
-    images: `**/*.{${imageExtensions}}`,
-  };
-
+  this.images = `**/*.{${imageExtensions}}`,
   this.php = `${this.app}templates/**/*.php`;
   this.js = `${this.app}js/**`;
   this.scss = `${this.app}scss/**/*.scss`;

@@ -10,9 +10,6 @@ require('./gulp/tasks/default')(gulp, runSequence, config.paths);
 // BrowserSync
 require('./gulp/tasks/browser-sync')(gulp, config.browserSync);
 
-// Build
-require('./gulp/tasks/build')(gulp, runSequence);
-
 // Clean
 require('./gulp/tasks/clean')(gulp, config.paths);
 
@@ -21,9 +18,6 @@ require('./gulp/tasks/deploy')(gulp, config);
 
 // ESLint
 require('./gulp/tasks/eslint')(gulp, config.paths.js);
-
-// Extras
-require('./gulp/tasks/extras')(gulp, config.paths);
 
 // PHP
 require('./gulp/tasks/php')(gulp, config.paths);
@@ -36,9 +30,6 @@ require('./gulp/tasks/images')(gulp, config);
 
 // JavaScript
 require('./gulp/tasks/js')(gulp, config);
-
-// Minify
-require('./gulp/tasks/minify')(gulp, config);
 
 // Move
 require('./gulp/tasks/rm')(gulp, runSequence);
