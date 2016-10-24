@@ -19,12 +19,14 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class(); ?>>
+  <body>
 
     <header class="header" role="banner">
       <section class="header__section">
         <h1 class="header__masthead">
-          <a class="header__link" href="<?php echo esc_url( home_url('/') ); ?>" rel="home"><?php bloginfo('name'); ?></a>
+          <a class="header__link" href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+            <?php bloginfo('name'); ?>
+          </a>
         </h1>
 
         <section class="header__user-controls">
@@ -123,7 +125,9 @@
 
         ?>
 
-          <a class="switch-blog__link" href="<?php echo get_site_url() ?>"><?php echo $current_blog_description ?></a>
+          <a class="switch-blog__link" href="<?php echo get_site_url() ?>">
+            <?php echo $current_blog_description ?>
+          </a>
         <?php
 
             restore_current_blog();

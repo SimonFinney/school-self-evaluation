@@ -1,7 +1,5 @@
 // Watch
 
-'use strict';
-
 module.exports = (gulp, runSequence, paths) =>
   gulp.task('watch', () => {
 

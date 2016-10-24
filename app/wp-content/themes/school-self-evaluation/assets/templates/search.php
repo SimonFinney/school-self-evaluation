@@ -43,7 +43,7 @@ get_header();
       ?>
 
       </ul>
-      
+
       <nav class="search-results__nav">
 
       <?php

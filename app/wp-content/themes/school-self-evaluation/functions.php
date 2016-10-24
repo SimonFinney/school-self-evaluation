@@ -117,7 +117,7 @@ function school_self_evaluation_search_excerpt_highlight() {
 function school_self_evaluation_scripts() {
 	wp_enqueue_style( 'school-self-evaluation-style', get_stylesheet_uri() );
 
-  wp_enqueue_script( 'school-self-evaluation-main', get_template_directory_uri() . '/dist/js/bundle.js', array(), '20151215', true );
+  wp_enqueue_script( 'school-self-evaluation-main', get_template_directory_uri() . '/dist/js/bundle.min.js', array(), '20151215', true );
 
   wp_enqueue_script( 'school-self-evaluation-twitter-widget', 'https://platform.twitter.com/widgets.js', array(), '20151215', true);
 
@@ -137,7 +137,7 @@ function school_self_evaluation_mce_buttons($buttons) {
 
 
 function school_self_evaluation_register_tinymce_javascript($plugin_array) {
-  $plugin_array['SchoolSelfEvaluation'] = get_template_directory_uri() . '/js/tinymce-plugin.js';
+  $plugin_array['SchoolSelfEvaluation'] = get_template_directory_uri() . '/dist/js/bundle.min.js';
   return $plugin_array;
 }
 
@@ -190,13 +190,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';

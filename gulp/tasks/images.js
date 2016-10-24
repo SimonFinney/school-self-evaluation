@@ -1,7 +1,4 @@
 // Images
-
-'use strict';
-
 const imagemin = require('gulp-imagemin');
 
 module.exports = (gulp, config) =>

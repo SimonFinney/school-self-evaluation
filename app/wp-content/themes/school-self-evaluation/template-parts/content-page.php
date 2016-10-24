@@ -56,7 +56,9 @@
       $parent_title = get_the_title($parent_page);
   ?>
 
-  <a href="<?php echo $parent_link; ?>">Back to <?php echo $parent_title; ?></a>
+  <a href="<?php echo $parent_link; ?>">
+    Back to <?php echo $parent_title; ?>
+  </a>
 
   <?php
 

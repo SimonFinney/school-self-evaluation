@@ -5,8 +5,12 @@ module.exports = (gulp, config) =>
 
 gulp.task('deploy', () => {
   const connection = vinylFtp.create(config.vinylFtp);
+  const assetsFolder = config.paths.app.slice(0, -1);
 
-  gulp.src(`${config.paths.basePath}**/*`)
+  gulp.src([
+    `!${assetsFolder}{,/**}`,
+    `${config.paths.basePath}**/*`,
+  ])
     .pipe(
       connection.newer(config.vinylFtp.path)
     )

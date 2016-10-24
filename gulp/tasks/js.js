@@ -1,12 +1,21 @@
 // JavaScript
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
 
-'use strict';
+module.exports = (gulp, configToModify) => {
+  const config = configToModify;
 
-const webpack = require('webpack-stream');
+  config.webpack.plugins = [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
+  ];
 
-module.exports = (gulp, config) =>
   gulp.task('js', () =>
-    gulp.src(`${config.paths.js}main.js`)
-      .pipe(webpack(config.webpack))
+    gulp.src(`${config.paths.js}index.js`)
+      .pipe(webpackStream(config.webpack))
       .pipe(gulp.dest(`${config.paths.distDir}js`))
   );
+};

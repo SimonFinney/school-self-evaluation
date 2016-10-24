@@ -11,7 +11,9 @@
 
 <section class="content__article">
 	<header class="entry__header">
-		<h2><?php esc_html_e('No updates found', 'school-self-evaluation'); ?></h2>
+		<h2>
+      <?php esc_html_e('No updates found', 'school-self-evaluation'); ?>
+    </h2>
 	</header>
 
 		<?php if (is_home() && current_user_can( 'publish_posts')) : ?>

@@ -1,8 +1,4 @@
-
 // Sass
-
-'use strict';
-
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
 const rename = require('gulp-rename');

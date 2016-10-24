@@ -1,7 +1,4 @@
 // Module configuration
-
-'use strict';
-
 const util = require('gulp-util');
 const ftpCredentials = require('../FTP_CREDENTIALS.json');
 
@@ -13,11 +10,11 @@ const imageExtensions = [
   'svg',
 ];
 
-const paths = new (function() {
+const paths = new (function createPaths() {
   this.basePath = 'app/wp-content/themes/school-self-evaluation/';
   this.app = `${this.basePath}assets/`;
-  this.distDir = `${this.basePath}dist/`;;
-  this.images = `**/*.{${imageExtensions}}`,
+  this.distDir = `${this.basePath}dist/`;
+  this.images = `**/*.{${imageExtensions}}`;
   this.php = `${this.app}templates/**/*.php`;
   this.js = `${this.app}js/**`;
   this.scss = `${this.app}scss/**/*.scss`;
@@ -67,9 +64,6 @@ const vinylFtp = {
 
 const webpack = {
   devtool: 'source-map',
-  output: {
-    filename: 'bundle.js',
-  },
   module: {
     loaders: [
       {
@@ -78,10 +72,13 @@ const webpack = {
         loader: 'babel',
         query: {
           presets: ['es2015'],
-        }
-      }
-    ]
-  }
+        },
+      },
+    ],
+  },
+  output: {
+    filename: 'bundle.min.js',
+  },
 };
 
 module.exports = {

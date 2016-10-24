@@ -6,11 +6,9 @@ import {
   getElements,
 } from './util';
 
+import './tinymce-plugin';
 
 const app = getElement('[data-app]');
-const styleButtons = getElements('[data-class]', app);
-const subnavigationLinks = getElements('.sub-menu a', app);
-
 let currentStyleClass;
 
 
@@ -45,6 +43,9 @@ function toggleStyles(event) {
 
 
 function init() {
+  const styleButtons = getElements('[data-class]', app);
+  const subnavigationLinks = getElements('.sub-menu a', app);
+
   currentStyleClass = localStorage.getItem('class');
 
   if (currentStyleClass) {
@@ -60,5 +61,6 @@ function init() {
   });
 }
 
-
-init();
+if (app) {
+  init();
+}

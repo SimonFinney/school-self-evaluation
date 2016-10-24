@@ -29,27 +29,29 @@ $blog_list = wp_get_sites(
 
 ?>
 
-<nav class="front-page__navigation">
+  <nav class="front-page__navigation">
 
 
-<?php
+  <?php
 
 
-  foreach ($blog_list as $blog) {
-    switch_to_blog($blog['blog_id']);
+    foreach ($blog_list as $blog) {
+      switch_to_blog($blog['blog_id']);
 
-?>
+  ?>
 
-  <a class="switch-blog__link" href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('description'); ?></a>
+    <a class="switch-blog__link" href="<?php echo get_site_url(); ?>">
+      <?php echo get_bloginfo('description'); ?>
+    </a>
 
-<?php
+  <?php
 
-    restore_current_blog();
-  }
+      restore_current_blog();
+    }
 
-?>
+  ?>
 
-</nav>
+  </nav>
 </section>
 
 <?php

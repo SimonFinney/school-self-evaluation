@@ -1,7 +1,5 @@
 // PHP
 
-'use strict';
-
 module.exports = (gulp, paths) =>
   gulp.task('php', () =>
     gulp.src(paths.php)
