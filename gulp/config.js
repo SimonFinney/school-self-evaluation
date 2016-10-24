@@ -1,5 +1,6 @@
 // Module configuration
 const util = require('gulp-util');
+const webpack = require('webpack');
 const ftpCredentials = require('../FTP_CREDENTIALS.json');
 
 // Paths
@@ -62,7 +63,7 @@ const vinylFtp = {
   log: util.log,
 };
 
-const webpack = {
+const webpackConfig = {
   devtool: 'source-map',
   module: {
     loaders: [
@@ -79,6 +80,15 @@ const webpack = {
   output: {
     filename: 'bundle.min.js',
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(
+      {
+        compress: {
+          warnings: false,
+        },
+      }
+    ),
+  ],
 };
 
 module.exports = {
@@ -88,5 +98,5 @@ module.exports = {
   htmlmin,
   imagemin,
   vinylFtp,
-  webpack,
+  webpackConfig,
 };
