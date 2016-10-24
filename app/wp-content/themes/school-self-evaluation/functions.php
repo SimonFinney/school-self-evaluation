@@ -115,7 +115,7 @@ function school_self_evaluation_search_excerpt_highlight() {
  * Enqueue scripts and styles.
  */
 function school_self_evaluation_scripts() {
-	wp_enqueue_style( 'school-self-evaluation-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'school-self-evaluation-style', get_stylesheet_directory_uri() . '/dist/css/style.min.css');
 
   wp_enqueue_script( 'school-self-evaluation-main', get_template_directory_uri() . '/dist/js/bundle.min.js', array(), '20151215', true );
 

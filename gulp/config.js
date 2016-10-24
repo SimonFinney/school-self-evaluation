@@ -54,6 +54,8 @@ const imagemin = {
   progressive: true,
 };
 
+const sass = { outputStyle: 'compressed' };
+
 const vinylFtp = {
   host: ftpCredentials.host,
   user: ftpCredentials.user,
@@ -97,6 +99,7 @@ module.exports = {
   browserSync,
   htmlmin,
   imagemin,
+  sass,
   vinylFtp,
   webpackConfig,
 };
