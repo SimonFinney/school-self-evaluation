@@ -185,8 +185,3 @@ add_filter('next_posts_link_attributes', 'school_self_evaluation_posts_link_attr
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
