@@ -85,14 +85,14 @@
 .social-media__link--facebook {
 
   &::before {
-    background-image: url('dist/images/facebook.svg');
+    background-image: url('../images/facebook.svg');
   }
 }
 
 .social-media__link--twitter {
 
   &::before {
-    background-image: url('dist/images/twitter.svg');
+    background-image: url('../images/twitter.svg');
   }
 }
 
