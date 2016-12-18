@@ -41,7 +41,7 @@ $blog_list = wp_get_sites(
   ?>
 
     <a class="switch-blog__link" href="<?php echo get_site_url(); ?>">
-      <?php echo get_bloginfo('description'); ?>
+      <?php echo __(get_bloginfo('description')); ?>
     </a>
 
   <?php

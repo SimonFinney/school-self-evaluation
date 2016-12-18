@@ -109,7 +109,6 @@
             )
           );
 
-          $current_blog_id = get_current_blog_id();
           $current_blog_description = get_bloginfo('description');
 
         ?>
