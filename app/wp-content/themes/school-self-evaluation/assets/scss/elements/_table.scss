@@ -1,0 +1,13 @@
+// Table
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+td,
+th {
+  padding: 8px;
+  border: 1px solid $background-darkest;
+}
