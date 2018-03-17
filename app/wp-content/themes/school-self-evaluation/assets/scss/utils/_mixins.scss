@@ -9,9 +9,7 @@
     $width: if($margin, calc(#{$percentage} - #{$margin}), $percentage);
 
     #{$selector} {
-
       &:first-of-type {
-
         &:nth-last-of-type(#{$column-index}),
         &:nth-last-of-type(#{$column-index}) ~ #{$selector} {
           width: $width;
@@ -27,28 +25,22 @@
   @include rem-property(line-height, $line-height);
 }
 
-
 // Returns breakpoints from the associated Sass map
 @mixin media-query($breakpoint-name, $breakpoints: $breakpoints) {
-
   @if not map-has-key($breakpoints, $breakpoint-name) {
-
     @error 'Unknown breakpoint "#{$breakpoint-name}"';
   }
 
   @media #{map-get($breakpoints, $breakpoint-name)} {
-
     @content;
   }
 }
 
-
 // Calculates rem for a property with a pixel fallback
 @mixin rem-property($property, $value, $divider: 1) {
   #{$property}: (($value * $desired-font-size) / $divider) + px;
-  #{$property}:  ($value / $divider) + rem;
+  #{$property}: ($value / $divider) + rem;
 }
-
 
 // Returns z-index order for the element passed in
 @mixin z-index($element) {
