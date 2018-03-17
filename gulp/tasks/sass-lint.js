@@ -1,7 +1,4 @@
 // Sass Lint
-
-'use strict';
-
 const sassLint = require('gulp-sass-lint');
 
 module.exports = (gulp, paths) =>

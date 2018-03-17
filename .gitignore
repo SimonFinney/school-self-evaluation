@@ -2,7 +2,6 @@
 .*/
 
 # Package folders
-bower_components
 node_modules
 
 # Output folders
@@ -13,5 +12,13 @@ dist
 
 # Individual folders and files
 **/.DS_Store
-data
+app/*
+app/wp-content/*
+app/wp-content/themes/*
 logs
+FTP_CREDENTIALS.json
+
+# Folders and files not to ignore
+!app/wp-content
+!app/wp-content/themes
+!app/wp-content/themes/school-self-evaluation

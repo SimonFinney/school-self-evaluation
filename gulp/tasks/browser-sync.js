@@ -1,7 +1,4 @@
 // BrowserSync
-
-'use strict';
-
 const browserSync = require('browser-sync');
 
 module.exports = (gulp, browserSyncConfig) => {

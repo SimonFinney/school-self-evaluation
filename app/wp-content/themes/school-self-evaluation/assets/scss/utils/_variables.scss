@@ -1,0 +1,55 @@
+// Variables
+
+// Colours
+$background: #f4f4f4;
+$background-darkest: #5a5a5a;
+
+$lightest: #fff;
+$darkest: #121212;
+
+$brand-primary: #326598;
+$brand-primary-light: #cbdbe8;
+$brand-primary-dark: #022a5d;
+
+$brand-secondary: #be2222;
+
+$header-gradient-start: $brand-primary;
+$header-gradient-end: #013467;
+
+$border-colour: #ccc;
+
+// High contrast
+$high-contrast-background: #000;
+$high-contrast-body: #ff0;
+$high-contrast-a: #0ff;
+$high-contrast-a-hover: #0f0;
+
+// Layout
+$total-section-columns: 6;
+
+// Breakpoints
+$breakpoints: (
+  'medium': 'only screen and (min-width: 768px)'
+);
+
+// Typography
+$font-family: (
+  Helvetica,
+  Arial,
+  sans-serif
+);
+
+$font-size: 100%; // 16px / 16px
+$desired-font-size: 16;
+
+// Element minimum heights
+$header-min-height: 104px;
+$footer-min-height: 186px;
+
+// Margins
+$section-margin: 24px;
+
+// Element ordering for z-indexes
+$z-index-order: (
+  sub-menu
+);

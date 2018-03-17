@@ -1,6 +1,7 @@
 // Module configuration
-
-'use strict';
+const util = require('gulp-util');
+const webpack = require('webpack');
+const ftpCredentials = require('../FTP_CREDENTIALS.json');
 
 // Paths
 const imageExtensions = [
@@ -10,19 +11,13 @@ const imageExtensions = [
   'svg',
 ];
 
-const paths = new (function() {
+const paths = new (function createPaths() {
   this.basePath = 'app/wp-content/themes/school-self-evaluation/';
   this.app = `${this.basePath}assets/`;
-  this.distDir = `${this.basePath}dist/`;;
-
-  this.extras = {
-    favicon: '*.ico',
-    fonts: 'fonts/**',
-    images: `**/*.{${imageExtensions}}`,
-  };
-
+  this.distDir = `${this.basePath}dist/`;
+  this.images = `**/*.{${imageExtensions}}`;
   this.php = `${this.app}templates/**/*.php`;
-  this.js = `${this.app}js/`;
+  this.js = `${this.app}js/**`;
   this.scss = `${this.app}scss/**/*.scss`;
 });
 
@@ -42,28 +37,36 @@ const browsers = [
   'Android > 0',
 ];
 
-const autoprefixerConfig = { browsers: browsers };
+const autoprefixer = { browsers };
 
-const browserSyncConfig = {
+const browserSync = {
   notify: false,
   proxy: 'http://192.168.99.100:8080',
 };
 
-const htmlminConfig = {
+const htmlmin = {
   collapseWhitespace: true,
   removeComments: true,
 };
 
-const imageminConfig = {
+const imagemin = {
   interlaced: true,
   progressive: true,
 };
 
+const sass = { outputStyle: 'compressed' };
+
+const vinylFtp = {
+  host: ftpCredentials.host,
+  user: ftpCredentials.user,
+  maxConnections: 8,
+  password: ftpCredentials.password,
+  path: ftpCredentials.path,
+  log: util.log,
+};
+
 const webpackConfig = {
   devtool: 'source-map',
-  output: {
-    filename: 'bundle.js',
-  },
   module: {
     loaders: [
       {
@@ -72,18 +75,31 @@ const webpackConfig = {
         loader: 'babel',
         query: {
           presets: ['es2015'],
-        }
+        },
+      },
+    ],
+  },
+  output: {
+    filename: 'bundle.min.js',
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(
+      {
+        compress: {
+          warnings: false,
+        },
       }
-    ]
-  }
+    ),
+  ],
 };
 
-
 module.exports = {
-  paths: paths,
-  autoprefixer: autoprefixerConfig,
-  browserSync: browserSyncConfig,
-  htmlmin: htmlminConfig,
-  imagemin: imageminConfig,
-  webpack: webpackConfig,
+  paths,
+  autoprefixer,
+  browserSync,
+  htmlmin,
+  imagemin,
+  sass,
+  vinylFtp,
+  webpackConfig,
 };

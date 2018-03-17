@@ -1,0 +1,70 @@
+// Extends
+
+%button--touch {
+  width: 40px;
+  height: 40px;
+  font-family: $font-family;
+  cursor: pointer;
+  border: 0;
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+@include media-query('medium') {
+
+  %button--touch {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+%color--light {
+  color: $lightest;
+
+  a {
+    color: $lightest;
+  }
+}
+
+%input--text {
+  max-width: 400px;
+  min-height: 40px;
+  padding: 4px 8px;
+  font-family: $font-family;
+  background-color: $lightest;
+  border: 1px solid $border-colour;
+  box-sizing: border-box;
+  transition: .3s;
+
+  &:focus,
+  &:hover {
+    border-color: $brand-primary;
+  }
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+@include media-query('medium') {
+
+  %input--text {
+    min-height: 16px;
+  }
+}
+
+%form__input {
+  @extend %input--text;
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+%reset--ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}

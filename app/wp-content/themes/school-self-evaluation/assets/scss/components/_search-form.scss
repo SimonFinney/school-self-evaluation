@@ -1,0 +1,17 @@
+// Search form
+
+.search-form {
+  display: flex;
+  margin-left: 16px;
+}
+
+.search-field {
+  @extend %input--text;
+}
+
+@include media-query('medium') {
+
+  .search-field {
+    min-height: 16px;
+  }
+}

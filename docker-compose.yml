@@ -4,8 +4,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
     image: mariadb
-    volumes:
-    - ./data:/docker-entrypoint-initdb.d
 
   phpmyadmin:
     environment:
@@ -28,6 +26,6 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./app/wp-content/themes/school-self-evaluation:/var/www/html/wp-content/themes/school-self-evaluation
+      - ./app/:/var/www/html
 
 version: '2'

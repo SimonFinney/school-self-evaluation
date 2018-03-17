@@ -1,0 +1,77 @@
+// Section
+
+%section {
+  padding-right: 24px;
+  padding-left: 24px;
+  box-sizing: border-box;
+}
+
+.main__content,
+.content__blog-navigation,
+.content__article,
+.content__article--front-page,
+.aside,
+.footer__content {
+  @extend %section;
+}
+
+.main__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content__article {
+  width: 100%;
+}
+
+.section {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-top: 1px solid $brand-primary-light;
+}
+
+.footer__content {
+  overflow: auto;
+}
+
+@include media-query('medium') {
+
+  %section {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .content__article {
+
+    &:not(:last-child) {
+      width: calc(66% - 16px);
+      margin-right: 16px;
+    }
+  }
+
+  .section {
+    display: inline-block;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: $section-margin;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @include calculate-columns('.section', $total-section-columns, $section-margin);
+
+  .section--embed {
+    overflow: auto;
+
+    > * {
+      float: left;
+      max-width: calc(50% - 24px);
+      margin-right: 24px;
+      content: '';
+    }
+  }
+}

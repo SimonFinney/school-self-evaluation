@@ -22,67 +22,6 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:33
-#@ _s
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:51
-#, php-format
-#@ _s
-msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#: comments.php:31
-#, php-format
-#@ _s
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:40
-#: comments.php:61
-#@ _s
-msgid "Comment navigation"
-msgstr ""
-
-#: comments.php:43
-#: comments.php:64
-#@ _s
-msgid "Older Comments"
-msgstr ""
-
-#: comments.php:44
-#: comments.php:65
-#@ _s
-msgid "Newer Comments"
-msgstr ""
-
-#: comments.php:78
-#@ _s
-msgid "Comments are closed."
-msgstr ""
-
-#: footer.php:18
-#@ _s
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: footer.php:18
-#, php-format
-#@ _s
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:20
-#, php-format
-#@ _s
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
 #: functions.php:47
 #@ _s
 msgid "Primary"
@@ -91,11 +30,6 @@ msgstr ""
 #: functions.php:102
 #@ _s
 msgid "Sidebar"
-msgstr ""
-
-#: header.php:25
-#@ _s
-msgid "Skip to content"
 msgstr ""
 
 #: header.php:45
@@ -128,27 +62,6 @@ msgstr ""
 #, php-format
 #@ _s
 msgid "Posted in %1$s"
-msgstr ""
-
-#: inc/template-tags.php:58
-#, php-format
-#@ _s
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc/template-tags.php:64
-#@ _s
-msgid "Leave a comment"
-msgstr ""
-
-#: inc/template-tags.php:64
-#@ _s
-msgid "1 Comment"
-msgstr ""
-
-#: inc/template-tags.php:64
-#@ _s
-msgid "% Comments"
 msgstr ""
 
 #. translators: %s: Name of current post
@@ -192,7 +105,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#. translators: %s: Name of current post. 
+#. translators: %s: Name of current post.
 #: template-parts/content.php:33
 #, php-format
 #@ _s

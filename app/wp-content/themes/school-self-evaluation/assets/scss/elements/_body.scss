@@ -1,0 +1,10 @@
+// Body
+
+body {
+  @extend %type--body;
+
+  height: 100%;
+  margin: 0;
+  color: $darkest;
+  background-color: $background;
+}

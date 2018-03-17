@@ -10,19 +10,26 @@
  */
 
 ?>
+      </section>
+  	</main>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'school-self-evaluation' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'school-self-evaluation' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'school-self-evaluation' ), 'school-self-evaluation', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
+    <footer class="footer" role="contentinfo">
+      <section class="footer__content">
+        <section class="footer__inspectorate-meta">
+          <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/Education_MARK_MASTER_Centred_Black.png" width="350" height="284">
+          <span class="footer__tagline">Promoting the Quality of Learning</span>
+        </section>
+        <span class="footer__meta">An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
+        <ul class="footer__social-media">
+          <li class="social-media__list-item">
+            <a class="social-media__link--facebook" href="https://www.facebook.com/DESInspectorate/" target="_blank">Facebook</a>
+          </li>
+          <li class="social-media__list-item">
+            <a class="social-media__link--twitter" href="https://twitter.com/SSEinspectorate" target="_blank">Twitter</a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <?php wp_footer(); ?>
+  </body>
 </html>

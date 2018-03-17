@@ -1,0 +1,12 @@
+// Input
+
+.form {
+
+  input {
+
+    &[type='email'],
+    &[type='text'] {
+      @extend %form__input;
+    }
+  }
+}
