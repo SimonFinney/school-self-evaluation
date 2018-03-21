@@ -16,7 +16,7 @@
     <footer class="footer" role="contentinfo">
       <section class="footer__content">
         <section class="footer__inspectorate-meta">
-          <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/Education_MARK_MASTER_Centred_Black.png" width="350" height="284">
+          <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/Education_MARK_MASTER_Centred_White.png" width="350" height="284">
           <span class="footer__tagline">Promoting the Quality of Learning</span>
         </section>
         <span class="footer__meta">An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
