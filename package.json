@@ -4,6 +4,7 @@
   "description": "School Self-Evaluation",
   "main": "gulpfile.js",
   "scripts": {
+    "deploy": "yarn format && yarn dev deploy",
     "dev": "gulp",
     "format": "prettier --ignore-path .gitignore --write '**/*.{js,php,scss}'"
   },

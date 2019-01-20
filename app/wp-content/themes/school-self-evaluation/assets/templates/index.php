@@ -24,7 +24,7 @@ if (have_posts()):
 			<?php endif; ?>
 
       <section class="content__article">
-        <h2>What's New</h2>
+        <h2><?php echo __("[:en]What's new[:ga]Cad atá nua[:]?"); ?></h2>
 
       <?php
       $post_query = new WP_Query('posts_per_page=5');
