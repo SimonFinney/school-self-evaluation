@@ -1,5 +1,4 @@
 services:
-
   mysql:
     environment:
       MYSQL_ROOT_PASSWORD: password
@@ -28,4 +27,4 @@ services:
     volumes:
       - ./app/:/var/www/html
 
-version: '2'
+version: "2"

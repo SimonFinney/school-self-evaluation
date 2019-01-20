@@ -6,7 +6,6 @@
  *
  * @package School_Self-Evaluation
  */
-
 ?>
 
 <li class="search-results__list-item">
@@ -14,13 +13,18 @@
   	<header class="search-result__header">
 
   		<?php
+    the_title(
+      sprintf(
+        '<a class="search-result__link" href="%s" rel="bookmark">',
+        esc_url(get_permalink())
+      ),
+      '</a>'
+    );
 
-      the_title(sprintf('<a class="search-result__link" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a>');
-
-      if ('post' === get_post_type()) :
-  		    school_self_evaluation_posted_on();
-  		endif;
-      ?>
+    if ('post' === get_post_type()):
+      school_self_evaluation_posted_on();
+    endif;
+    ?>
   	</header>
 
     <p>

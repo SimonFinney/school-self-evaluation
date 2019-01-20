@@ -1,5 +1,8 @@
 // Layout
 
+@import '../utils/extends';
+@import '../utils/mixins';
+
 %container {
   max-width: 1024px;
   margin-right: auto;
@@ -47,7 +50,6 @@
 }
 
 @include media-query('medium') {
-
   .content__article--front-page {
     margin-top: 32px;
     margin-bottom: 32px;

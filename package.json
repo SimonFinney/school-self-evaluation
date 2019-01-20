@@ -4,7 +4,8 @@
   "description": "School Self-Evaluation",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "node_modules/gulp/bin/gulp.js"
+    "dev": "gulp",
+    "format": "prettier --ignore-path .gitignore --write '**/*.{js,php,scss}'"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/SimonFinney/school-self-evaluation#readme",
   "devDependencies": {
+    "@prettier/plugin-php": "^0.9.0",
     "babel-core": "^6.8.0",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
@@ -43,6 +45,7 @@
     "gulp-sass-lint": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
+    "prettier": "^1.16.0",
     "run-sequence": "^1.1.5",
     "vinyl-ftp": "^0.5.0",
     "webpack": "^1.13.2",

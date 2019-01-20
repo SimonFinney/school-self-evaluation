@@ -1,24 +1,28 @@
-# Hidden folders
-.*/
-
-# Package folders
+# Project dependencies.
 node_modules
 
-# Output folders
+# Built directories.
 dist
 
-# Always-ignore files
+# Operating system-specific.
+.DS_Store
+
+# Logs.
 *.log
 
-# Individual folders and files
-**/.DS_Store
+# Hidden folders.
+.*/
+
+# Project uses Yarn.
+package-lock.json
+
+# Individual folders and files.
 app/*
 app/wp-content/*
 app/wp-content/themes/*
-logs
 FTP_CREDENTIALS.json
 
-# Folders and files not to ignore
+# Folders and files not to ignore.
 !app/wp-content
 !app/wp-content/themes
 !app/wp-content/themes/school-self-evaluation

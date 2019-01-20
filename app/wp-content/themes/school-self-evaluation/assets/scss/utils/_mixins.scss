@@ -1,5 +1,7 @@
 // Mixins
 
+@import './variables';
+
 // Calculates layout columns
 @mixin calculate-columns($selector-string, $total-columns, $margin) {
   $selector: unquote($selector-string);

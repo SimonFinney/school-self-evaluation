@@ -29,15 +29,11 @@ $total-section-columns: 6;
 
 // Breakpoints
 $breakpoints: (
-  'medium': 'only screen and (min-width: 768px)'
+  'medium': 'only screen and (min-width: 768px)',
 );
 
 // Typography
-$font-family: (
-  Helvetica,
-  Arial,
-  sans-serif
-);
+$font-family: (Helvetica, Arial, sans-serif);
 
 $font-size: 100%; // 16px / 16px
 $desired-font-size: 16;
@@ -50,6 +46,4 @@ $footer-min-height: 186px;
 $section-margin: 24px;
 
 // Element ordering for z-indexes
-$z-index-order: (
-  sub-menu
-);
+$z-index-order: (sub-menu);

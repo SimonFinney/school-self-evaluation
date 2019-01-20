@@ -13,52 +13,45 @@
  */
 
 get_header();
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
+if (have_posts()):
+  if (is_home() && !is_front_page()): ?>
 				<header>
 					<h1>
             <?php single_post_title(); ?>
           </h1>
 				</header>
 
-			<?php
-
-			endif;
-      ?>
+			<?php endif; ?>
 
       <section class="content__article">
         <h2>What's New</h2>
 
       <?php
-
       $post_query = new WP_Query('posts_per_page=5');
 
-			/* Start the Loop */
-			while ($post_query -> have_posts()) : $post_query -> the_post();
+      /* Start the Loop */
+      while ($post_query->have_posts()):
+        $post_query->the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part('template-parts/content', get_post_format());
+        /*
+         * Include the Post-Format-specific template for the content.
+         * If you want to override this in a child theme, then include a file
+         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+         */
+        get_template_part('template-parts/content', get_post_format());
+      endwhile;
 
-			endwhile;
+      the_posts_navigation();
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part('template-parts/content', 'none');
-
-		endif;
-    ?>
+else:
+  get_template_part('template-parts/content', 'none');
+endif;
+?>
 
   </section>
 
 <?php
-
 get_sidebar();
 get_footer();
+
 ?>

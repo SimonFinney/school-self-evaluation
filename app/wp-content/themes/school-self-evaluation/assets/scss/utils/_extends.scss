@@ -1,5 +1,8 @@
 // Extends
 
+@import './mixins';
+@import './variables';
+
 %button--touch {
   width: 40px;
   height: 40px;
@@ -13,7 +16,6 @@
 }
 
 @include media-query('medium') {
-
   %button--touch {
     width: 24px;
     height: 24px;
@@ -36,7 +38,7 @@
   background-color: $lightest;
   border: 1px solid $border-colour;
   box-sizing: border-box;
-  transition: .3s;
+  transition: 0.3s;
 
   &:focus,
   &:hover {
@@ -49,7 +51,6 @@
 }
 
 @include media-query('medium') {
-
   %input--text {
     min-height: 16px;
   }

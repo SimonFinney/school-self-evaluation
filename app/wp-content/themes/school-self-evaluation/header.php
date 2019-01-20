@@ -8,12 +8,11 @@
  *
  * @package School_Self-Evaluation
  */
-
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-app>
   <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -24,28 +23,24 @@
     <header class="header" role="banner">
       <section class="header__section">
         <h1 class="header__masthead">
-          <a class="header__link" href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+          <a class="header__link" href="<?php echo esc_url(
+            home_url('/')
+          ); ?>" rel="home">
             <?php bloginfo('name'); ?>
           </a>
         </h1>
 
         <section class="header__user-controls">
 
-          <?php
-
-          if (has_nav_menu('language')) {
-
-            wp_nav_menu(
-              array(
-                container_class => 'language-container',
-                menu => 'language',
-                menu_class => 'language-list',
-                menu_id => 'languageList',
-                theme_location => 'language',
-              )
-            );
-          }
-          ?>
+          <?php if (has_nav_menu('language')) {
+            wp_nav_menu(array(
+              container_class => 'language-container',
+              menu => 'language',
+              menu_class => 'language-list',
+              menu_id => 'languageList',
+              theme_location => 'language'
+            ));
+          } ?>
 
           <ul class="header__social-media">
             <li class="social-media__list-item">
@@ -56,10 +51,7 @@
             </li>
           </ul>
 
-          <?php
-
-          get_search_form();
-          ?>
+          <?php get_search_form(); ?>
 
           <ul class="layout-list">
             <li class="layout-list__item">
@@ -76,67 +68,50 @@
           </ul>
         </section>
 
-        <?php
-
-        if (has_nav_menu('navigation')) {
-
-          wp_nav_menu(
-            array(
-              container => 'nav',
-              container_class => 'header__nav',
-              items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
-              menu => 'navigation',
-              menu_class => 'header__nav__list',
-              menu_id => 'headerNavList',
-              theme_location => 'navigation',
-            )
-          );
-        }
-        ?>
+        <?php if (has_nav_menu('navigation')) {
+          wp_nav_menu(array(
+            container => 'nav',
+            container_class => 'header__nav',
+            items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
+            menu => 'navigation',
+            menu_class => 'header__nav__list',
+            menu_id => 'headerNavList',
+            theme_location => 'navigation'
+          ));
+        } ?>
       </section>
     </header>
     <main class="main" role="main">
       <section class="main__content">
 
-        <?php
+        <?php if (is_multisite() && !is_page('home')) {
 
-        // Don't display this on the landing layout
-        if (is_multisite() && !is_page('home')) {
-
-          $blog_list = wp_get_sites(
-            array(
-              limit => 1
-            )
-          );
+          $blog_list = wp_get_sites(array(
+            limit => 1
+          ));
 
           $current_blog_description = get_bloginfo('description');
-
-        ?>
+          ?>
 
         <nav class="content__blog-navigation">
 
 
         <?php
+        foreach ($blog_list as $blog) {
+          switch_to_blog($blog['blog_id']); ?>
 
-
-          foreach ($blog_list as $blog) {
-            switch_to_blog($blog['blog_id']);
-
-        ?>
-
-          <a class="switch-blog__link" href="<?php echo get_site_url() ?>">
-            <?php echo $current_blog_description ?>
+          <a class="switch-blog__link" href="<?php echo get_site_url(); ?>">
+            <?php echo $current_blog_description; ?>
           </a>
-        <?php
+        <?php restore_current_blog();
+        }
 
-            restore_current_blog();
-          }
-
-          $breadcrumb_title = (is_search() || is_home() || is_page('home')) ? '' : get_the_title();
-          echo $breadcrumb_title;
-
+        $breadcrumb_title =
+          is_search() || is_home() || is_page('home') ? '' : get_the_title();
+        echo $breadcrumb_title;
         ?>
 
         </nav>
 
-  <?php } ?>
+  <?php
+        } ?>

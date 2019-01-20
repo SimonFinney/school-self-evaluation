@@ -1,9 +1,7 @@
 // High contrast
 
 %high-contrast__nav__menu-item {
-
   &.current-menu-item {
-
     > a {
       background-color: $high-contrast-a-hover;
     }
@@ -22,7 +20,6 @@
 }
 
 .high-contrast {
-
   %button--primary,
   %button--secondary {
     text-decoration: underline;
@@ -76,14 +73,12 @@
   }
 
   .header__nav__list {
-
     .menu-item {
       @extend %high-contrast__nav__menu-item;
     }
   }
 
   .layout-list__button {
-
     &[data-class=''],
     &[data-class='large-text-size'] {
       background-color: $lightest;
@@ -133,11 +128,8 @@
 }
 
 @include media-query('medium') {
-
   .high-contrast {
-
     .content__article {
-
       + .aside {
         border-left: 1px solid $lightest;
       }

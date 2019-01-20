@@ -1,29 +1,23 @@
 // TODO: Comments
 
-import {
-  forEachElement,
-  getElement,
-  getElements,
-} from './util';
+import { forEachElement, getElement, getElements } from './util';
 
 import './tinymce-plugin';
 
 const app = getElement('[data-app]');
 let currentStyleClass;
 
-
 function toggleSubnavigationFocus(event) {
-  const isFocusEvent = (event.type === 'focus');
+  const isFocusEvent = event.type === 'focus';
 
-  const subnavigationMenu = event.target
-    .parentNode
-    .parentNode;
+  const subnavigationMenu = event.target.parentNode.parentNode;
 
-  isFocusEvent ?
-    subnavigationMenu.setAttribute('data-active', '') :
+  if (isFocusEvent) {
+    subnavigationMenu.setAttribute('data-active', '');
+  } else {
     subnavigationMenu.removeAttribute('data-active');
+  }
 }
-
 
 function toggleStyles(event) {
   const styleButton = event.target;
@@ -41,7 +35,6 @@ function toggleStyles(event) {
   localStorage.setItem('class', currentStyleClass);
 }
 
-
 function init() {
   const styleButtons = getElements('[data-class]', app);
   const subnavigationLinks = getElements('.sub-menu a', app);
@@ -52,7 +45,9 @@ function init() {
     app.classList.add(currentStyleClass);
   }
 
-  forEachElement(styleButtons, styleButton => styleButton.addEventListener('click', toggleStyles));
+  forEachElement(styleButtons, styleButton =>
+    styleButton.addEventListener('click', toggleStyles)
+  );
 
   // Handles tabbing through the subnavigation
   forEachElement(subnavigationLinks, subnavigationLink => {

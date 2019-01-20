@@ -7,11 +7,10 @@
   font-weight: bold;
   cursor: pointer;
   border: 0;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 %button--active {
-
   &:active,
   &:focus,
   &:hover {
@@ -29,7 +28,6 @@
 }
 
 %button__secondary--active {
-
   &:active,
   &:focus,
   &:hover {
@@ -47,9 +45,7 @@
 }
 
 .form {
-
   input {
-
     &[type='reset'],
     &[type='submit'] {
       float: right;

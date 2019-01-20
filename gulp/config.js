@@ -1,26 +1,21 @@
 // Module configuration
 const util = require('gulp-util');
 const webpack = require('webpack');
-const ftpCredentials = require('../FTP_CREDENTIALS.json');
+
+const { HOST, PASSWORD, PATH, USER } = require('../FTP_CREDENTIALS.json');
 
 // Paths
-const imageExtensions = [
-  'gif',
-  'jpg',
-  'png',
-  'svg',
-];
+const imageExtensions = ['gif', 'jpg', 'png', 'svg'];
 
-const paths = new (function createPaths() {
+const paths = new function createPaths() {
   this.basePath = 'app/wp-content/themes/school-self-evaluation/';
   this.app = `${this.basePath}assets/`;
   this.distDir = `${this.basePath}dist/`;
   this.images = `**/*.{${imageExtensions}}`;
   this.php = `${this.app}templates/**/*.php`;
   this.js = `${this.app}js/**`;
-  this.scss = `${this.app}scss/**/*.scss`;
-});
-
+  this.scss = `${this.app}scss/**/style.scss`;
+}();
 
 // Configuration
 const browsers = [
@@ -57,11 +52,11 @@ const imagemin = {
 const sass = { outputStyle: 'compressed' };
 
 const vinylFtp = {
-  host: ftpCredentials.host,
-  user: ftpCredentials.user,
+  host: HOST,
+  user: USER,
   maxConnections: 8,
-  password: ftpCredentials.password,
-  path: ftpCredentials.path,
+  password: PASSWORD,
+  path: PATH,
   log: util.log,
 };
 
@@ -83,13 +78,11 @@ const webpackConfig = {
     filename: 'bundle.min.js',
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin(
-      {
-        compress: {
-          warnings: false,
-        },
-      }
-    ),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
   ],
 };
 

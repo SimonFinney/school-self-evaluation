@@ -32,7 +32,7 @@
     background-color: transparent;
     content: '';
     transform: translateX(-50%);
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &::after {
@@ -47,7 +47,6 @@
 
   &:focus,
   &:hover {
-
     &::before {
       background-color: currentColor;
     }
@@ -70,9 +69,7 @@
 }
 
 @include media-query('medium') {
-
   .layout-list__button {
-
     &::before {
       bottom: 4px;
     }

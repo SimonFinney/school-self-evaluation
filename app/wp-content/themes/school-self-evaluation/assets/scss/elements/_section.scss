@@ -35,14 +35,12 @@
 }
 
 @include media-query('medium') {
-
   %section {
     padding-right: 32px;
     padding-left: 32px;
   }
 
   .content__article {
-
     &:not(:last-child) {
       width: calc(66% - 16px);
       margin-right: 16px;
@@ -62,7 +60,11 @@
     }
   }
 
-  @include calculate-columns('.section', $total-section-columns, $section-margin);
+  @include calculate-columns(
+    '.section',
+    $total-section-columns,
+    $section-margin
+  );
 
   .section--embed {
     overflow: auto;

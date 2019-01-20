@@ -13,10 +13,7 @@
 */
 
 // Utilities
-@import
-'utils/variables',
-'utils/mixins',
-'utils/extends';
+@import 'utils/variables', 'utils/mixins', 'utils/extends';
 
 /*-------------------
 >>> Table of Contents
@@ -29,44 +26,22 @@
 --------------------*/
 
 /*----- 1.0 Typography -----*/
-@import
-'utils/typography',
-'elements/h1',
-'elements/h2',
-'elements/h3',
-'elements/h4';
-
+@import 'utils/typography', 'elements/h1', 'elements/h2', 'elements/h3',
+  'elements/h4';
 
 /*----- 2.0 Layout -----*/
 @import 'layout/layout';
 
 /*----- 3.0 Elements -----*/
-@import
-'elements/a',
-'elements/article',
-'elements/aside',
-'elements/body',
-'elements/button',
-'elements/footer',
-'elements/header',
-'elements/html',
-'elements/iframe',
-'elements/img',
-'elements/input',
-'elements/label',
-'elements/main',
-'elements/section',
-'elements/table',
-'elements/textarea',
-'elements/ul';
+@import 'elements/a', 'elements/article', 'elements/aside', 'elements/body',
+  'elements/button', 'elements/footer', 'elements/header', 'elements/html',
+  'elements/iframe', 'elements/img', 'elements/input', 'elements/label',
+  'elements/main', 'elements/section', 'elements/table', 'elements/textarea',
+  'elements/ul';
 
 /*----- 4.0 Navigation -----*/
-@import
-'components/navigation',
-'components/search-form';
+@import 'components/navigation', 'components/search-form';
 
 /*----- 5.0 Components -----*/
-@import
-'components/high-contrast',
-'components/layout-list',
-'components/search-meta';
+@import 'components/high-contrast', 'components/layout-list',
+  'components/search-meta';
