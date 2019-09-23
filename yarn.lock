@@ -1034,10 +1034,10 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bower@^1.7.9:
-  version "1.8.7"
-  resolved "https://registry.yarnpkg.com/bower/-/bower-1.8.7.tgz#b6df6f074304177371ceea606fc5b62d810337b0"
-  integrity sha512-M0yrA0IkpXP4v2taRkmowyUHTCFAvtfTVtRDAXBnhZM02xh8fP3wlrdOiXPs/5CYBCdj20WyGKZuYA0g3h3Y1w==
+bower@^1.8.8:
+  version "1.8.8"
+  resolved "https://registry.yarnpkg.com/bower/-/bower-1.8.8.tgz#82544be34a33aeae7efb8bdf9905247b2cffa985"
+  integrity sha512-1SrJnXnkP9soITHptSO+ahx3QKp3cVzn8poI6ujqc5SeOkg5iqM1pK9H+DSc2OQ8SnO0jC/NG4Ur/UIwy7574A==
 
 bowser@1.0.0:
   version "1.0.0"
@@ -5775,8 +5775,9 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-"php-parser@github:glayzzle/php-parser#ca007c812e9920bcf1ae9fd24f1a92f5d5906a5e":
+php-parser@glayzzle/php-parser#ca007c812e9920bcf1ae9fd24f1a92f5d5906a5e:
   version "3.0.0-prerelease.5"
+  uid ca007c812e9920bcf1ae9fd24f1a92f5d5906a5e
   resolved "https://codeload.github.com/glayzzle/php-parser/tar.gz/ca007c812e9920bcf1ae9fd24f1a92f5d5906a5e"
 
 pify@^2.0.0, pify@^2.3.0:
