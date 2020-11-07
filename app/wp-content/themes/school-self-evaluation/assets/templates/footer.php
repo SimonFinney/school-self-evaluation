@@ -15,10 +15,9 @@
     <footer class="footer" role="contentinfo">
       <section class="footer__content">
         <section class="footer__inspectorate-meta">
-          <img alt="Department of Education and Skills Inspectorate" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/Education_MARK_MASTER_Centred_White.png" width="350" height="284">
-          <span class="footer__tagline">Promoting the Quality of Learning</span>
+          <img alt="An Roinn Oideachais | Department of Education" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.png" width="255" height="100">
         </section>
-        <span class="footer__meta">An Roinn Oideachais agus Scileanna | Department of Education and Skills</span>
+        <span class="footer__meta">An Roinn Oideachais | Department of Education</span>
         <ul class="footer__social-media">
           <li class="social-media__list-item">
             <a class="social-media__link--facebook" href="https://www.facebook.com/DESInspectorate/" target="_blank">Facebook</a>
