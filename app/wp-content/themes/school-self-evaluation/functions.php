@@ -47,22 +47,22 @@ if (!function_exists('school_self_evaluation_setup')):
     add_theme_support('post-thumbnails');
 
     // This theme uses wp_nav_menu() in one location.
-    register_nav_menus(array(
+    register_nav_menus([
       'navigation' => esc_html__('Navigation'),
       'language' => esc_html__('Language')
-    ));
+    ]);
 
     /*
      * Switch default core markup for search form, comment form, and comments
      * to output valid HTML5.
      */
-    add_theme_support('html5', array(
+    add_theme_support('html5', [
       'search-form',
       'comment-form',
       'comment-list',
       'gallery',
       'caption'
-    ));
+    ]);
   }
 endif;
 add_action('after_setup_theme', 'school_self_evaluation_setup');
@@ -90,7 +90,7 @@ add_action('after_setup_theme', 'school_self_evaluation_content_width', 0);
  */
 function school_self_evaluation_widgets_init()
 {
-  register_sidebar(array(
+  register_sidebar([
     'name' => esc_html__('Sidebar', 'school-self-evaluation'),
     'id' => 'sidebar-1',
     'description' => esc_html__('Add widgets here.', 'school-self-evaluation'),
@@ -98,7 +98,7 @@ function school_self_evaluation_widgets_init()
     'after_widget' => '</section>',
     'before_title' => '<h3>',
     'after_title' => '</h3>'
-  ));
+  ]);
 }
 add_action('widgets_init', 'school_self_evaluation_widgets_init');
 
@@ -133,7 +133,7 @@ function school_self_evaluation_scripts()
   wp_enqueue_script(
     'school-self-evaluation-main',
     get_template_directory_uri() . '/dist/js/bundle.min.js',
-    array(),
+    [],
     '20151215',
     true
   );
@@ -141,7 +141,7 @@ function school_self_evaluation_scripts()
   wp_enqueue_script(
     'school-self-evaluation-twitter-widget',
     'https://platform.twitter.com/widgets.js',
-    array(),
+    [],
     '20151215',
     true
   );
@@ -170,7 +170,7 @@ function school_self_evaluation_register_tinymce_javascript($plugin_array)
 // Remove visual editor buttons
 function school_self_evaluation_tinymce_buttons($buttons)
 {
-  $buttons_to_remove = array(
+  $buttons_to_remove = [
     'aligncenter',
     'alignjustify',
     'alignleft',
@@ -181,7 +181,7 @@ function school_self_evaluation_tinymce_buttons($buttons)
     'indent',
     'outdent',
     'strikethrough'
-  );
+  ];
 
   return array_diff($buttons, $buttons_to_remove);
 }

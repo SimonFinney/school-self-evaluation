@@ -33,19 +33,16 @@
         <section class="header__user-controls">
 
           <?php if (has_nav_menu('language')) {
-            wp_nav_menu(array(
+            wp_nav_menu([
               container_class => 'language-container',
               menu => 'language',
               menu_class => 'language-list',
               menu_id => 'languageList',
               theme_location => 'language'
-            ));
+            ]);
           } ?>
 
           <ul class="header__social-media">
-            <li class="social-media__list-item">
-              <a class="social-media__link--facebook" href="https://www.facebook.com/DESInspectorate/" target="_blank">Facebook</a>
-            </li>
             <li class="social-media__list-item">
               <a class="social-media__link--twitter" href="https://twitter.com/SSEinspectorate" target="_blank">Twitter</a>
             </li>
@@ -69,7 +66,7 @@
         </section>
 
         <?php if (has_nav_menu('navigation')) {
-          wp_nav_menu(array(
+          wp_nav_menu([
             container => 'nav',
             container_class => 'header__nav',
             items_wrap => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
@@ -77,7 +74,7 @@
             menu_class => 'header__nav__list',
             menu_id => 'headerNavList',
             theme_location => 'navigation'
-          ));
+          ]);
         } ?>
       </section>
     </header>
@@ -86,9 +83,9 @@
 
         <?php if (is_multisite() && !is_page('home')) {
 
-          $blog_list = wp_get_sites(array(
+          $blog_list = wp_get_sites([
             limit => 1
-          ));
+          ]);
 
           $current_blog_description = get_bloginfo('description');
           ?>
@@ -114,4 +111,5 @@
         </nav>
 
   <?php
-        } ?>
+        }
+?>

@@ -16,4 +16,5 @@ if (is_front_page() || is_page('contact')) { ?>
   <?php dynamic_sidebar('sidebar-1'); ?>
 </aside>
 
-<?php } ?>
+<?php }
+?>

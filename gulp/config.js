@@ -7,7 +7,7 @@ const { HOST, PASSWORD, PATH, USER } = require('../FTP_CREDENTIALS.json');
 // Paths
 const imageExtensions = ['gif', 'jpg', 'png', 'svg'];
 
-const paths = new function createPaths() {
+const paths = new (function createPaths() {
   this.basePath = 'app/wp-content/themes/school-self-evaluation/';
   this.app = `${this.basePath}assets/`;
   this.distDir = `${this.basePath}dist/`;
@@ -15,7 +15,7 @@ const paths = new function createPaths() {
   this.php = `${this.app}templates/**/*.php`;
   this.js = `${this.app}js/**`;
   this.scss = `${this.app}scss/**/style.scss`;
-}();
+})();
 
 // Configuration
 const browsers = [
@@ -66,7 +66,7 @@ const webpackConfig = {
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules/,
         loader: 'babel',
         query: {
           presets: ['es2015'],

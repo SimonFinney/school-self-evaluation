@@ -46,19 +46,19 @@
     the_content(
       sprintf(
         // %s: Name of the current post
-        wp_kses(__('Continue reading %s', 'school-self-evaluation'), array(
-          'span' => array('class' => array())
-        )),
+        wp_kses(__('Continue reading %s', 'school-self-evaluation'), [
+          'span' => ['class' => []]
+        ]),
         the_title("<span class=\"entry-content__title\">'", "'</span>", false)
       )
     );
 
-    wp_link_pages(array(
+    wp_link_pages([
       'before' =>
         '<div class="page-links">' .
           esc_html__('Pages:', 'school-self-evaluation'),
       'after' => '</div>'
-    ));
+    ]);
     ?>
 
 	<footer class="entry__footer">

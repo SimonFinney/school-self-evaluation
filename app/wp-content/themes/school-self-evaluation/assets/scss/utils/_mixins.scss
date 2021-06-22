@@ -7,14 +7,13 @@
   $selector: unquote($selector-string);
 
   @for $column-index from 1 through $total-columns {
-    $percentage: ((100 / $column-index) + %);
-    $width: if($margin, calc(#{$percentage} - #{$margin}), $percentage);
+    $percentage: '#{100 / $column-index}%';
 
     #{$selector} {
       &:first-of-type {
         &:nth-last-of-type(#{$column-index}),
         &:nth-last-of-type(#{$column-index}) ~ #{$selector} {
-          width: $width;
+          width: if($margin, calc(#{$percentage} - #{$margin}), $percentage);
         }
       }
     }

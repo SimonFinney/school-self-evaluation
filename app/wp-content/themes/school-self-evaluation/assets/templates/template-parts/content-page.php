@@ -31,7 +31,7 @@
 	</header>
 
   <?php
-  $child_pages = get_pages(array('child_of' => $post->ID));
+  $child_pages = get_pages(['child_of' => $post->ID]);
 
   if (empty($post->post_content) && count($child_pages) === 0) { ?>
 
@@ -60,12 +60,12 @@
   <?php
   endif;
 
-  wp_link_pages(array(
+  wp_link_pages([
     'before' =>
       '<div class="page-links">' .
         esc_html__('Pages:', 'school-self-evaluation'),
     'after' => '</div>'
-  ));
+  ]);
   ?>
 
 	<?php if (get_edit_post_link()): ?>
@@ -74,7 +74,7 @@
       sprintf(
         // %s: Name of the current post
         esc_html__('Edit %s', 'school-self-evaluation'),
-        the_title("<span class=\"entry-footer__title\">", "</span>", false)
+        the_title("<span class=\"entry-footer__title\">", '</span>', false)
       ),
       '<span class="entry-footer__edit-link">',
       '</span>'

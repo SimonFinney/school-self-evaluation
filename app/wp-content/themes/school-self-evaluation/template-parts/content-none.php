@@ -24,7 +24,7 @@
               'Ready to publish an update? <a href="%1$s">Start here</a>.',
               'school-self-evaluation'
             ),
-            array('a' => array('href' => array()))
+            ['a' => ['href' => []]]
           ),
           esc_url(admin_url('post-new.php'))
         ); ?>
@@ -48,4 +48,5 @@
         ); ?>
       </p>
 
-		<?php endif; ?>
+		<?php endif;
+?>

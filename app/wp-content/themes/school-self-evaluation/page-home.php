@@ -19,9 +19,9 @@ get_header(); ?>
     the_content();
   endwhile; // End of the loop
 
-  $blog_list = wp_get_sites(array(
+  $blog_list = wp_get_sites([
     offset => 1
-  ));
+  ]);
   ?>
 
   <nav class="front-page__navigation">
